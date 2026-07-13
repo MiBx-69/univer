@@ -1,0 +1,86 @@
+{% comment %}Premium Editorial Collection Grid{% endcomment %}
+
+<section class="pcg" style="padding:{{ section.settings.padding_top }}px {{ section.settings.side_padding }}px {{ section.settings.padding_bottom }}px;">
+  {% if section.settings.heading != blank %}
+    <header class="pcg__header">
+      <h2>{{ section.settings.heading }}</h2>
+    </header>
+  {% endif %}
+
+  <div class="pcg__grid cols-{{ section.settings.desktop_columns }} mob-{{ section.settings.mobile_columns }}">
+    {% for block in section.blocks %}
+      {% assign collection = block.settings.collection %}
+      {% assign image = block.settings.image | default: collection.featured_image %}
+
+      <a class="pcg__card" href="{{ collection.url }}" {{ block.shopify_attributes }}>
+        <div class="pcg__image ratio-{{ section.settings.image_ratio }}">
+          {% if image %}
+            {{ image | image_url: width: 1800 | image_tag: loading: 'lazy', widths: '480,720,960,1440,1800', sizes: '(min-width:750px) 33vw,100vw' }}
+          {% else %}
+            {{ 'collection-1' | placeholder_svg_tag }}
+          {% endif %}
+        </div>
+
+        <{{ section.settings.title_tag }} class="pcg__title">
+          {% if block.settings.title != blank %}
+            {{ block.settings.title }}
+          {% else %}
+            {{ collection.title }}
+          {% endif %}
+        </{{ section.settings.title_tag }}>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+.pcg{max-width:1400px;margin:auto}
+.pcg__header{text-align:center;margin-bottom:32px}
+.pcg__header h2{margin:0;font-size:clamp(30px,5vw,46px);font-weight:800}
+.pcg__grid{display:grid;gap:20px}
+.cols-2{grid-template-columns:repeat(2,1fr)}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+.cols-4{grid-template-columns:repeat(4,1fr)}
+.cols-5{grid-template-columns:repeat(5,1fr)}
+.mob-1{}
+.mob-2{}
+.pcg__card{text-decoration:none;color:#111}
+.pcg__image{overflow:hidden;background:#f5f5f5}
+.ratio-adapt img{width:100%;height:auto;display:block}
+.ratio-square{aspect-ratio:1}
+.ratio-portrait{aspect-ratio:4/5}
+.ratio-landscape{aspect-ratio:16/9}
+.ratio-square img,.ratio-portrait img,.ratio-landscape img{width:100%;height:100%;object-fit:cover;display:block}
+.pcg__image img{transition:transform .5s ease}
+.pcg__card:hover img{transform:scale(1.04)}
+.pcg__title{margin:14px 0 0;font-size:clamp(18px,2vw,24px);font-weight:700;line-height:1.2;color:#111}
+@media(max-width:749px){
+.mob-1{grid-template-columns:1fr}
+.mob-2{grid-template-columns:repeat(2,1fr)}
+.pcg{padding-left:16px!important;padding-right:16px!important}
+.pcg__grid{gap:16px}
+.pcg__title{margin-top:10px;font-size:20px}
+}
+</style>
+
+{% schema %}
+{
+"name":"Editorial Collection Grid",
+"settings":[
+{"type":"text","id":"heading","label":"Heading","default":"Shop by Collection"},
+{"type":"range","id":"padding_top","min":0,"max":120,"step":4,"default":40,"label":"Top padding"},
+{"type":"range","id":"padding_bottom","min":0,"max":120,"step":4,"default":40,"label":"Bottom padding"},
+{"type":"range","id":"side_padding","min":0,"max":40,"step":2,"default":16,"label":"Side padding"},
+{"type":"select","id":"desktop_columns","label":"Desktop columns","default":"3","options":[{"value":"2","label":"2"},{"value":"3","label":"3"},{"value":"4","label":"4"},{"value":"5","label":"5"}]},
+{"type":"select","id":"mobile_columns","label":"Mobile columns","default":"2","options":[{"value":"1","label":"1"},{"value":"2","label":"2"}]},
+{"type":"select","id":"image_ratio","label":"Image ratio","default":"adapt","options":[{"value":"adapt","label":"Adapt"},{"value":"square","label":"Square"},{"value":"portrait","label":"Portrait"},{"value":"landscape","label":"Landscape"}]},
+{"type":"select","id":"title_tag","label":"Title tag","default":"h3","options":[{"value":"h1","label":"H1"},{"value":"h2","label":"H2"},{"value":"h3","label":"H3"},{"value":"h4","label":"H4"},{"value":"h5","label":"H5"},{"value":"h6","label":"H6"},{"value":"p","label":"Paragraph"},{"value":"div","label":"Div"}]}
+],
+"blocks":[{"type":"collection","name":"Collection","settings":[
+{"type":"collection","id":"collection","label":"Collection"},
+{"type":"image_picker","id":"image","label":"Override image"},
+{"type":"text","id":"title","label":"Custom title"}
+]}],
+"presets":[{"name":"Editorial Collection Grid"}]
+}
+{% endschema %}
