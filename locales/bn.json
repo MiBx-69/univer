@@ -444,15 +444,140 @@
     "cart_title": "ঝুরি",
     "form": {
       "name": "নাম",
-      "send": "পাঠান"
+      "send": "পাঠান",
+      "title": "যোগাযোগ ফর্ম"
     },
     "free_shipping_1": "বিনামূল্যে",
     "menu": "মেনু",
     "pagination": {
       "button_next": "পরবর্তী",
-      "button_previous": "পূর্ববর্তী"
+      "button_previous": "পূর্ববর্তী",
+      "label": "পৃষ্ঠাঙ্কন",
+      "page": "পাতা {{ number }}"
     },
-    "product_badge_sale": "বিক্রয় ( ছাড় )"
+    "product_badge_sale": "বিক্রয় ( ছাড় )",
+    "free_shipping_2": "পরে জানানো হবে",
+    "free_shipping_message": "সকল অর্ডারে বিনামূল্যে শিপিং যদি মূল্য হয়",
+    "free_shipping_message_1": "আপনি বিনামূল্যে শিপিংয়ের জন্য যোগ্য!",
+    "free_shipping_message_2": "শুধুই",
+    "free_shipping_message_3": "দূরে",
+    "free_shipping_message_4": "বিনামূল্যে শিপিং",
+    "grid": {
+      "name": "গ্রিড"
+    },
+    "headings": {
+      "product": "পণ্য"
+    },
+    "hours": "ঘণ্টা",
+    "items": "আইটেমগুলি",
+    "items_added": {
+      "one": "{{ quantity }}টি জিনিস যোগ করা হয়েছে",
+      "other": "{{ quantity }}টি আইটেম যোগ করা হয়েছে"
+    },
+    "items_per_page": "{{ limit }} আইটেম প্রতি পৃষ্ঠা",
+    "items_per_page_label": "প্রতি পৃষ্ঠায় আইটেম",
+    "items_removed": {
+      "one": "{{ quantity }}টি আইটেম সরানো হয়েছে",
+      "other": "{{ quantity }}টি আইটেম সরানো হয়েছে"
+    },
+    "load_slide": "স্লাইড লোড করুন",
+    "loading": "লোড হচ্ছে...",
+    "login": {
+      "paragraph_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\" class=\"link link--underline\">লগ ইন করুন</a> দ্রুত চেক আউট করতে।"
+    },
+    "max_error": "এই আইটেমটির সর্বোচ্চ {{ max }}",
+    "min_error": "এই আইটেমটির সর্বনিম্ন {{ min }}",
+    "mins": "মিনিট",
+    "new_estimated_total": "নতুন আনুমানিক মোট",
+    "next_announcement": "পরবর্তী ঘোষণা",
+    "no_articles_found": "কোনো প্রবন্ধ পাওয়া যায়নি",
+    "no_collections_found": "কোন সংগ্রহ পাওয়া যায়নি",
+    "no_content": "এই পৃষ্ঠার জন্য কোনো বিষয়বস্তু উপলব্ধ নেই",
+    "no_links_found": "কোনো লিঙ্ক খুঁজে পাওয়া যায়নি",
+    "no_more": "আর কোন পণ্য নেই",
+    "no_more_collection": "এই সংগ্রহে আর কোনো পণ্য নেই",
+    "no_pages_found": "কোনো পৃষ্ঠা পাওয়া যায়নি",
+    "no_product_added": "আপনার পছন্দের তালিকায় কোনো পণ্য যোগ করা হয়নি।",
+    "no_results": "কোনো ফলাফল পাওয়া যায়নি \"{{ terms }}\"-এর জন্য। বানান পরীক্ষা করুন অথবা অন্য শব্দ বা শব্দগুচ্ছ ব্যবহার করুন।",
+    "note": "অতিরিক্ত মন্তব্য",
+    "note_placeholder": "বিক্রেতার জন্য বিশেষ নির্দেশাবলী...",
+    "page": "পৃষ্ঠা",
+    "password_page": {
+      "admin_link_html": "আপনি কি দোকানের মালিক? <a href=\"/admin\" class=\"link link--underline\">এখান থেকে লগ ইন করুন</a>",
+      "login_form_error": "ভুল পাসওয়ার্ড!",
+      "login_form_heading": "পাসওয়ার্ড ব্যবহার করে দোকানে প্রবেশ করুন:",
+      "login_form_password_placeholder": "আপনার পাসওয়ার্ড",
+      "login_form_submit": "দাখিল করুন",
+      "powered_by_shopify_html": "এই দোকানটি {{ shopify }} দ্বারা চালিত হবে"
+    },
+    "please_select_content_to_display": "বিষয়বস্তু প্রদর্শনের জন্য অনুগ্রহ করে একটি পৃষ্ঠা নির্বাচন করুন।",
+    "popular_countries_regions": "জনপ্রিয় দেশ/অঞ্চল",
+    "previous_announcement": "আগের ঘোষণা",
+    "product": "পণ্য",
+    "product_image_main": "মূল ছবি",
+    "product_image_secondary": "দ্বিতীয় ছবি",
+    "product_subtotal": "পণ্যের মোট মূল্য",
+    "product_title": "উদাহরণস্বরূপ পণ্যের শিরোনাম",
+    "product_variants": "পণ্য প্রকরণ",
+    "recently_viewed_products": "সম্প্রতি দেখা পণ্যগুলি",
+    "recipient_form_checkbox": "আমি প্রাপককে একটি উপহার কার্ড পাঠাতে চাই",
+    "recipient_form_email_address_label": "প্রাপকের ইমেল ঠিকানা (ঐচ্ছিক)",
+    "recipient_form_email_label": "প্রাপকের ইমেল",
+    "remove_all": "সবগুলো সরান",
+    "remove_all_items_confirmation": "আপনার কার্ট থেকে {{ quantity }}টি আইটেম সরাবেন?",
+    "remove_all_single_item_confirmation": "আপনার কার্ট থেকে 1টি আইটেম সরাবেন?",
+    "remove_title": "অপসারণ করুন {{ title }}",
+    "results_pages_with_count": {
+      "one": "{{ count }}টি পাতা",
+      "other": "{{ count }}টি পৃষ্ঠা"
+    },
+    "results_suggestions_with_count": {
+      "one": "{{ count }} পরামর্শ",
+      "other": "{{ count }}টি পরামর্শ"
+    },
+    "results_with_count": {
+      "one": "{{ count }} ফলাফল"
+    },
+    "results_with_count_and_term": {
+      "one": "{{ count }} ফলাফলের জন্য “{{ terms }}” পাওয়া গেছে",
+      "other": "{{ count }} ফলাফলের জন্য “{{ terms }}” পাওয়া গেছে"
+    },
+    "sec": "সেকেন্ড",
+    "secs": "সেকেন্ড",
+    "search_for": "সার্চ করুন “{{ terms }}”",
+    "search_results_quick_keywords": "জনপ্রিয় অনুসন্ধানগুলি",
+    "search_results_quick_links": "জনপ্রিয় বিভাগসমূহ",
+    "share": {
+      "close": "শেয়ার বন্ধ করুন",
+      "copy_to_clipboard": "লিঙ্ক কপি করুন",
+      "share_url": "লিঙ্ক",
+      "success_message": "লিঙ্ক ক্লিপবোর্ডে কপি করা হয়েছে"
+    },
+    "share_wishlist_via_email": "ইমেলের মাধ্যমে আমার পছন্দের তালিকা শেয়ার করুন",
+    "sidebar": "সাইডবার",
+    "slide": "স্লাইড",
+    "slider": {
+      "name": "স্লাইডার",
+      "next_slide": "ডানদিকে স্লাইড করুন",
+      "of": "এর",
+      "previous_slide": "বামে স্লাইড করুন"
+    },
+    "social": {
+      "facebook": "ফেসবুক",
+      "instagram": "ইনস্টাগ্রাম",
+      "pinterest": "পিন্টারেস্ট",
+      "snapchat": "স্ন্যাপচ্যাট",
+      "telegram": "টেলিগ্রাম",
+      "tiktok": "টিকটক",
+      "tumblr": "টাম্বলার",
+      "twitter": "এক্স (টুইটার)",
+      "vimeo": "ভিমিও",
+      "whatsapp": "হোয়াটসঅ্যাপ",
+      "youtube": "ইউটিউব"
+    },
+    "social_media": "সামাজিক মাধ্যম",
+    "sorry_no_products": "দুঃখিত, কোনো পণ্য নেই।",
+    "start_count": "দেখাচ্ছে"
   },
   "customer": {
     "addresses": {
