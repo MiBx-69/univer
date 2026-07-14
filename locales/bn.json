@@ -110,7 +110,8 @@
         },
         "geolocation": {
           "permission_not_allowed": "অবস্থানের তথ্য শেয়ার করার অনুমতি দিন অথবা অনুসন্ধান করুন।"
-        }
+        },
+        "or": "অথবা"
       },
       "split_delivery": {
         "accessibility": {
@@ -217,19 +218,33 @@
           "months": {
             "march": "মার্চ",
             "april": "এপ্রিল",
-            "august": "আগস্ট"
+            "august": "আগস্ট",
+            "may": "মে",
+            "june": "জুন",
+            "july": "জুলাই"
           },
           "weekdays": {
             "monday": "সোমবার",
             "friday": "শুক্রবার",
             "sunday": "রবিবার"
+          },
+          "weekdays_abbreviation": {
+            "monday": "মো",
+            "tuesday": "মঙ্গল",
+            "wednesday": "আমরা",
+            "thursday": "ম",
+            "friday": "ফরাসী ভাষায়",
+            "saturday": "শনি",
+            "sunday": "রবি"
           }
         },
         "back_button_label": "প্রত্যাবর্তন",
         "submit": "জমা দিন",
         "sheet": {
           "expand": "বিস্তৃত করুন"
-        }
+        },
+        "edit_link_label": "সম্পাদনা",
+        "cart": "ঝুরি"
       },
       "contact": {
         "email_label": "ইমেইল",
@@ -241,7 +256,8 @@
         "county_label": "কাউন্টি",
         "county_placeholder": "কাউন্টি",
         "region_label": "অঞ্চল",
-        "region_placeholder": "অঞ্চল"
+        "region_placeholder": "অঞ্চল",
+        "city_label": "শহর"
       },
       "stock": {
         "price_column_header": "দাম",
@@ -259,7 +275,18 @@
           "search_item": "অনুসন্ধান করুন"
         },
         "product_change_label": "পরিবর্তন",
-        "duties_label": "কর্তব্য"
+        "duties_label": "কর্তব্য",
+        "tip_label": "টিপ",
+        "free_total_label": "বিনামূল্যে",
+        "free_shipping_total_label": "বিনামূল্যে",
+        "paid_label": "পরিশোধিত",
+        "cost_table_item_column_header": "আইটেম",
+        "expand_order_summary_short": "দেখান",
+        "collapse_order_summary_short": "লুকান",
+        "total_already_paid_label": "পরিশোধিত",
+        "unit_price": {
+          "accessible_separator": "প্রতি"
+        }
       },
       "payment": {
         "apply_gift_card_button_label": "প্রয়োগ করুন",
@@ -288,13 +315,16 @@
           }
         },
         "saved_credit_card_actions": {
-          "delete": "মুছে ফেলুন"
+          "delete": "মুছে ফেলুন",
+          "edit": "সম্পাদনা"
         },
         "saved_credit_cards_modal": {
-          "cancel": "বাতিল করুন"
+          "cancel": "বাতিল করুন",
+          "done": "সম্পন্ন"
         },
         "add_credit_card_modal": {
-          "cancel": "বাতিল করুন"
+          "cancel": "বাতিল করুন",
+          "save": "সংরক্ষণ করুন"
         },
         "delete_credit_card_modal": {
           "cancel": "বাতিল করুন"
@@ -318,7 +348,16 @@
         "vault_for_payment_later": {
           "pay_button_label": "অর্ডার দিন",
           "notice": "আপনাকে এখন চার্জ করা হবে না। আপনার পেমেন্ট চালিয়ে যাওয়ার মাধ্যমে, আপনি সম্মত হচ্ছেন যে আপনার অর্ডার প্রক্রিয়া করার সময় আপনার পেমেন্ট পদ্ধতিতে চার্জ করা হবে।"
-        }
+        },
+        "bank_picker_label": "ব্যাংক",
+        "usdc_label": "ইউএসডিসি",
+        "preview_not_available": {
+          "button": "ঠিক আছে"
+        },
+        "edit_credit_card_modal": {
+          "done": "সম্পন্ন"
+        },
+        "order_edit_banner_no_taxes_label": "কোনটিই নয়"
       },
       "post_purchase": {
         "components": {
@@ -362,6 +401,15 @@
         "recurring_total_intervals": {
           "month": {
             "one": "মাস"
+          },
+          "day": {
+            "one": "দিন"
+          },
+          "week": {
+            "one": "সপ্তাহ"
+          },
+          "year": {
+            "one": "বছর"
           }
         }
       },
@@ -373,18 +421,41 @@
       },
       "units": {
         "item": "আইটেম",
-        "fluid_ounce": "ফ্লু আউন্স"
+        "fluid_ounce": "ফ্লু আউন্স",
+        "milligram": "মিলিগ্রাম",
+        "kilogram": "কেজি",
+        "milliliter": "মিলি",
+        "centiliter": "ক্ল",
+        "cubic_meter": "মি³",
+        "millimeter": "মিমি",
+        "centimeter": "সেমি",
+        "square_meter": "বর্গমিটার",
+        "ounce": "ওজ",
+        "pound": "পাউন্ড",
+        "pint": "পয়েন্ট",
+        "quart": "কিউটি",
+        "gallon": "মেয়ে",
+        "inch": "ভিতরে",
+        "foot": "ফুট",
+        "yard": "গজ",
+        "square_foot": "ফুট²"
       },
       "delivery_options": {
-        "pickup": "পিকআপ"
+        "pickup": "পিকআপ",
+        "free_total_label": "বিনামূল্যে",
+        "ship": "জাহাজ"
       },
       "shipping": {
         "delete": "মুছে ফেলুন",
         "address_form": {
-          "cancel": "বাতিল করুন"
+          "cancel": "বাতিল করুন",
+          "save": "সংরক্ষণ করুন"
         },
         "split_shipping_shipping_label": "পদ্ধতি",
-        "split_shipping_option_custom": "কাস্টম"
+        "split_shipping_option_custom": "কাস্টম",
+        "free_rate_label": "বিনামূল্যে",
+        "edit": "সম্পাদনা",
+        "back": "পিছনে"
       },
       "field_errors": {
         "address_street_name_blank": "রাস্তার নাম লিখুন",
@@ -476,7 +547,8 @@
         "currency_updated_for_country": "%{country} এর জন্য মুদ্রা আপডেট করা হয়েছে"
       },
       "tips": {
-        "not_available_with_spi": "শপ পে কিস্তির মাধ্যমে উপলব্ধ নয়"
+        "not_available_with_spi": "শপ পে কিস্তির মাধ্যমে উপলব্ধ নয়",
+        "no_tip_label": "কোনটিই নয়"
       },
       "cart_checkout_validation": {
         "runtime_error": "আপনার অনুরোধ প্রক্রিয়া করণে একটি সমস্যা হয়েছে। দোকানের মালিকের সাথে যোগাযোগ করুন।"
@@ -492,6 +564,33 @@
           "policy_violation": "নীতি কনফিগারেশন বিধিনিষেধের কারণে চেকআউট সম্পূর্ণ করা যাচ্ছে না",
           "unrecoverable_failure": "চেকআউট লোড করা যাচ্ছে না। আবার চেষ্টা করুন"
         }
+      },
+      "localized_fields": {
+        "additional_information": {
+          "tax_credential_cl": "রুট",
+          "shipping_credential_cl": "রুট",
+          "tax_credential_id": "এনপিডব্লিউপি",
+          "shipping_credential_id": "এনপিডব্লিউপি",
+          "shipping_credential_mx": "আরএফসি",
+          "tax_credential_mx": "আরএফসি"
+        }
+      },
+      "billing": {
+        "edit": "সম্পাদনা",
+        "address_form": {
+          "save": "সংরক্ষণ করুন"
+        }
+      },
+      "payment_summary": {
+        "free_label": "বিনামূল্যে"
+      },
+      "alternative_payment_method_banner": {
+        "or": "অথবা"
+      },
+      "pickup_point": {
+        "or": "অথবা",
+        "selector_tab_map": "মানচিত্র",
+        "selector_tab_list": "তালিকা"
       }
     },
     "sentence": {
@@ -530,6 +629,12 @@
           "admin_link_text": "অ্যাডমিন"
         }
       }
+    },
+    "filters": {
+      "boolean": {
+        "true_label": "হাঁ",
+        "false_label": "না"
+      }
     }
   },
   "customer_accounts": {
@@ -547,7 +652,8 @@
       },
       "marketing_preferences": {
         "email_label": "ইমেইল"
-      }
+      },
+      "add_button": "যোগ করুন"
     },
     "orders": {
       "order_list": {
@@ -560,7 +666,8 @@
         },
         "payment_status": {
           "list_view": {
-            "paid": "পরিশোধিত"
+            "paid": "পরিশোধিত",
+            "due_without_date": "বকেয়া"
           }
         },
         "sort_title": "সাজান",
@@ -595,11 +702,14 @@
         "added": "যোগ করা হয়েছে"
       },
       "taxes": "কর",
-      "total": "মোট"
+      "total": "মোট",
+      "not_applicable": "নিষিদ্ধ",
+      "tip": "টিপ"
     },
     "addresses": {
       "back_button": "পিছনে",
-      "edit_button": "সম্পাদনা"
+      "edit_button": "সম্পাদনা",
+      "add_button_text": "যোগ করুন"
     },
     "address_form": {
       "save": "সংরক্ষণ করুন"
@@ -609,7 +719,10 @@
         "contact_name": "নাম",
         "taxes_none": "কোনটিই নয়",
         "contact_email": "ইমেইল",
-        "tax_exemptions_modal_close": "বন্ধ করা"
+        "tax_exemptions_modal_close": "বন্ধ করা",
+        "own_role_contact_name": "তুমি",
+        "multiple_tax_exemptions_and": "এবং",
+        "tax_exemption_not_applicable": "নিষিদ্ধ"
       },
       "draft_order_details": {
         "payment_status": {
@@ -638,6 +751,10 @@
       },
       "edit_payment_method": {
         "save_payment_method_button": "সংরক্ষণ করুন"
+      },
+      "or": "অথবা",
+      "add_payment_method": {
+        "button_title": "যোগ করুন"
       }
     },
     "payment_method_brands": {
@@ -646,7 +763,9 @@
       "bogus": "ভুয়া",
       "ideal": "আদর্শ",
       "swish": "সুইশ",
-      "twint": "টুইন্ট"
+      "twint": "টুইন্ট",
+      "jcb": "জেসিবি",
+      "elo": "এলো"
     },
     "ui_components": {
       "june": "জুন",
@@ -658,7 +777,15 @@
       "march": "মার্চ",
       "april": "এপ্রিল",
       "moneyLinesHeaderValue": "মূল্য",
-      "reviewItemHeaderValue": "মূল্য"
+      "reviewItemHeaderValue": "মূল্য",
+      "may": "মে",
+      "mondayAbbreviation": "মো",
+      "tuesdayAbbreviation": "মঙ্গল",
+      "wednesdayAbbreviation": "আমরা",
+      "thursdayAbbreviation": "ম",
+      "fridayAbbreviation": "ফরাসী ভাষায়",
+      "saturdayAbbreviation": "শনি",
+      "sundayAbbreviation": "রবি"
     },
     "profile_preview_bar": {
       "edit": "সম্পাদনা"
@@ -679,7 +806,8 @@
     },
     "account_menu": {
       "signed_out_state": {
-        "email_field_label": "ইমেইল"
+        "email_field_label": "ইমেইল",
+        "alternate_divider": "অথবা"
       }
     },
     "errors": {
@@ -692,7 +820,8 @@
     },
     "sign_in": {
       "step_one": {
-        "input_field_label": "ইমেইল"
+        "input_field_label": "ইমেইল",
+        "or": "অথবা"
       }
     }
   },
@@ -700,7 +829,8 @@
     "cart": "ঝুরি",
     "menu": "মেনু",
     "close": "বন্ধ করা",
-    "error": "ত্রুটি"
+    "error": "ত্রুটি",
+    "unit_price_separator": "প্রতি"
   },
   "actions": {
     "back": "পিছনে",
@@ -713,7 +843,8 @@
     "apply": "প্রয়োগ করুন",
     "clear": "পরিষ্কার",
     "close": "বন্ধ করা",
-    "reset": "রিসেট"
+    "reset": "রিসেট",
+    "add": "যোগ করুন"
   },
   "blogs": {
     "comment_form": {
@@ -871,7 +1002,10 @@
     "pages": "পাতা",
     "price": "দাম",
     "search_results_resource_pages": "পাতা",
-    "total": "মোট"
+    "total": "মোট",
+    "fields": {
+      "separator": "থেকে"
+    }
   },
   "customer": {
     "addresses": {
@@ -885,7 +1019,8 @@
       "total": "মোট"
     },
     "login_page": {
-      "email": "ইমেইল"
+      "email": "ইমেইল",
+      "alternate_provider_separator": "অথবা"
     },
     "order": {
       "price": "দাম",
