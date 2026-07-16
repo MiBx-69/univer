@@ -1,0 +1,17 @@
+{% comment %}
+category-card.liquid
+Reusable category card snippet.
+Usage:
+{% render 'category-card', collection: collection %}
+{% endcomment %}
+
+<a class="category-card" href="{{ collection.url }}">
+  {% if collection.featured_image %}
+    {{ collection.featured_image | image_url: width: 900 | image_tag }}
+  {% endif %}
+  <div class="overlay"></div>
+  <div class="content">
+    <h3>{{ collection.title }}</h3>
+    <span>SHOP COLLECTION →</span>
+  </div>
+</a>
