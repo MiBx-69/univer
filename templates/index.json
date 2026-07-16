@@ -588,18 +588,62 @@
         "padding-block-end": 0
       }
     },
+    "shop_by_category_TrARf4": {
+      "type": "shop-by-category",
+      "blocks": {
+        "collection_hfHXW6": {
+          "type": "collection",
+          "settings": {
+            "collection": "universesraw-bootcut-jeans"
+          }
+        },
+        "collection_nYPix7": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_9KKL6G": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "collection_9e3PbN": {
+          "type": "collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_hfHXW6",
+        "collection_nYPix7",
+        "collection_9KKL6G",
+        "collection_9e3PbN"
+      ],
+      "disabled": true,
+      "name": "Shop by Category",
+      "settings": {
+        "eyebrow": "CURATED EDITS",
+        "heading": "Shop by Category",
+        "view_all_text": "VIEW ALL",
+        "view_all_url": "shopify://collections",
+        "bg": "#ffffff"
+      }
+    },
     "17841805206947be4f": {
       "type": "_blocks",
       "blocks": {
         "ai_gen_block_bcbccc3_w8DgwB": {
           "type": "ai_gen_block_bcbccc3",
           "settings": {
-            "label": "CURATED EDITS",
+            "label": "CURATED COLLECTIONS",
             "heading": "Shop by Category",
             "heading_size_desktop": 48,
-            "heading_size_mobile": 32,
+            "heading_size_mobile": 22,
             "view_all_text": "VIEW ALL",
-            "view_all_url": "",
+            "view_all_url": "shopify://collections",
             "container_width": 1400,
             "gap_desktop": 24,
             "gap_mobile": 16,
@@ -609,37 +653,42 @@
             "padding_bottom_mobile": 64,
             "card_border_radius": 24,
             "card_title_size": 28,
-            "background_color": "#FFFFFF",
-            "label_color": "#C8102E",
+            "background_color": "#ffffff",
+            "label_color": "#c8102e",
             "heading_color": "#111111",
             "text_color": "#111111",
-            "nav_button_bg": "#FFFFFF",
+            "nav_button_bg": "#ffffff",
             "nav_button_color": "#111111",
-            "nav_button_border": "#E0E0E0",
+            "nav_button_border": "#e0e0e0",
             "nav_button_hover_bg": "#111111",
-            "nav_button_hover_color": "#FFFFFF",
+            "nav_button_hover_color": "#ffffff",
             "category_1_enabled": true,
-            "category_1_name": "Sneakers",
-            "category_1_url": "",
+            "category_1_name": "Bootcut",
+            "category_1_image": "shopify://shop_images/IMG_5129.jpg",
+            "category_1_url": "shopify://collections/universesraw-bootcut-jeans",
             "category_2_enabled": true,
-            "category_2_name": "Loafers",
-            "category_2_url": "",
+            "category_2_name": "T-shirts",
+            "category_2_image": "shopify://shop_images/Premium_t-shirt_collection.png",
+            "category_2_url": "shopify://collections/premium-t-shirt",
             "category_3_enabled": true,
-            "category_3_name": "Premium Shirts",
-            "category_3_url": "",
+            "category_3_name": "Polo",
+            "category_3_image": "shopify://shop_images/Premium_polo_collection.png",
+            "category_3_url": "shopify://collections/premium-polo",
             "category_4_enabled": true,
-            "category_4_name": "Polo Collection",
-            "category_4_url": "",
+            "category_4_name": "NIKE MIND 001 SLIDE",
+            "category_4_image": "shopify://shop_images/NIke_mind_001.png",
+            "category_4_url": "shopify://collections/nike-mind-001-slide",
             "category_5_enabled": true,
-            "category_5_name": "Denim",
-            "category_5_url": "",
-            "category_6_enabled": true,
+            "category_5_name": "Sneakers",
+            "category_5_image": "shopify://shop_images/ChatGPT_Image_Jul_16_2026_12_16_14_PM.png",
+            "category_5_url": "shopify://collections/sneakers",
+            "category_6_enabled": false,
             "category_6_name": "Bootcut Jeans",
             "category_6_url": "",
-            "category_7_enabled": true,
+            "category_7_enabled": false,
             "category_7_name": "Blazers",
             "category_7_url": "",
-            "category_8_enabled": true,
+            "category_8_enabled": false,
             "category_8_name": "Jackets",
             "category_8_url": ""
           },
@@ -649,7 +698,6 @@
       "block_order": [
         "ai_gen_block_bcbccc3_w8DgwB"
       ],
-      "disabled": true,
       "settings": {}
     },
     "collection_grid_pro_rpKicx": {
@@ -2211,6 +2259,7 @@
   },
   "order": [
     "slideshow_ghMhhT",
+    "shop_by_category_TrARf4",
     "17841805206947be4f",
     "collection_grid_pro_rpKicx",
     "featured_collection_list_WhLz8D",
