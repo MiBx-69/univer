@@ -325,7 +325,7 @@
           "settings": {
             "icon": "",
             "title": "Account",
-            "action_type": "drawer"
+            "action_type": "page"
           }
         }
       },
