@@ -327,7 +327,7 @@
       },
       "14784262235933562743": {
         "type": "shopify://apps/whatomation/blocks/whatsapp_widget/019f5ba1-2ab8-7aac-9ffe-c363cb8df63b",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "proxy_url": "/apps/verify/widget-settings",
           "header_title": "Customer Support",

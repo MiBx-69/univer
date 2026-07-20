@@ -158,8 +158,8 @@
             "heading_color": "#111111",
             "subtext_color": "#666666",
             "shop_all_color": "#111111",
-            "card_background": "#FFFFFF",
-            "image_background": "#FFFFFF",
+            "card_background": "#ffffff",
+            "image_background": "#ffffff",
             "badge_background": "#ff0019",
             "badge_color": "#ffffff",
             "brand_color": "#777777",
@@ -1235,18 +1235,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "1784527372aefcc8d6": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "178452750528994361": {
-      "type": "_blocks",
-      "settings": {}
-    },
-    "17845287354863b777": {
-      "type": "_blocks",
-      "settings": {}
     }
   },
   "order": [
@@ -1256,9 +1244,6 @@
     "slideshow_C6dxVH",
     "media_with_text_ErEQif",
     "featured_collection_JwDQg9",
-    "178368302367a7de5f",
-    "1784527372aefcc8d6",
-    "178452750528994361",
-    "17845287354863b777"
+    "178368302367a7de5f"
   ]
 }
