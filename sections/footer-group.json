@@ -11,6 +11,10 @@
   "name": "Footer group",
   "type": "footer",
   "sections": {
+    "1784528758b787bc26": {
+      "type": "_blocks",
+      "settings": {}
+    },
     "custom_liquid_A74MWj": {
       "type": "custom-liquid",
       "name": "t:names.custom_liquid",
@@ -27,7 +31,7 @@
         "footer_group_8drNWG": {
           "type": "_footer-group",
           "settings": {
-            "link": "",
+            "link": "shopify://collections",
             "open_in_new_tab": false,
             "content_direction": "row",
             "content_direction_tablet": "column",
@@ -1597,6 +1601,7 @@
     }
   },
   "order": [
+    "1784528758b787bc26",
     "custom_liquid_A74MWj",
     "footer_xnFeqX"
   ]
