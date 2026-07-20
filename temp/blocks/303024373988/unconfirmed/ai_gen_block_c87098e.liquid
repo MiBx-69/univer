@@ -1,6 +1,411 @@
+{% doc %}
+  @prompt
+    Create a luxury "As Featured In" press and media logo strip section for a premium fashion/streetwear brand. It should display a row of press/media outlet logos (e.g. Vogue, GQ, Hypebeast, Complex) with a centered heading like "AS SEEN IN" or "AS FEATURED IN". Style: minimal, dark or light background option, logos displayed in grayscale/monochrome that subtly brighten on hover, generous whitespace, uppercase spaced-out heading in a serif or elegant sans-serif font. Logos should be uploadable via theme editor settings. Optional: slow auto-scroll/marquee for mobile.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-press-strip-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 0 {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-press-strip-container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.container_width }}px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-press-strip-heading-{{ ai_gen_id }} {
+    text-align: center;
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    font-family: {{ block.settings.heading_font.family }}, {{ block.settings.heading_font.fallback_families }};
+    font-weight: {{ block.settings.heading_font.weight }};
+    font-size: {{ block.settings.heading_size }}px;
+    letter-spacing: {{ block.settings.heading_letter_spacing }}px;
+    text-transform: uppercase;
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-press-strip-logos-wrapper-{{ ai_gen_id }} {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ai-press-strip-logos-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: {{ block.settings.logo_spacing }}px;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-press-strip-logos-{{ ai_gen_id }} {
+      {% if block.settings.enable_mobile_marquee %}
+        flex-wrap: nowrap;
+        animation: ai-press-marquee-{{ ai_gen_id }} {{ block.settings.marquee_speed }}s linear infinite;
+      {% endif %}
+    }
+
+    {% if block.settings.enable_mobile_marquee %}
+      @keyframes ai-press-marquee-{{ ai_gen_id }} {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .ai-press-strip-logos-wrapper-{{ ai_gen_id }}::before,
+      .ai-press-strip-logos-wrapper-{{ ai_gen_id }}::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 100%;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      .ai-press-strip-logos-wrapper-{{ ai_gen_id }}::before {
+        left: 0;
+        background: linear-gradient(to right, {{ block.settings.background_color }}, transparent);
+      }
+
+      .ai-press-strip-logos-wrapper-{{ ai_gen_id }}::after {
+        right: 0;
+        background: linear-gradient(to left, {{ block.settings.background_color }}, transparent);
+      }
+    {% endif %}
+  }
+
+  .ai-press-strip-logo-item-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-press-strip-logo-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.logo_width }}px;
+    height: auto;
+    filter: grayscale({{ block.settings.grayscale_amount }}%);
+    opacity: {{ block.settings.logo_opacity }};
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+
+  .ai-press-strip-logo-{{ ai_gen_id }}:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-press-strip-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.7 }}px;
+      margin-bottom: {{ block.settings.heading_spacing | times: 0.7 }}px;
+    }
+
+    .ai-press-strip-logo-{{ ai_gen_id }} {
+      width: {{ block.settings.logo_width | times: 0.7 }}px;
+    }
+
+    .ai-press-strip-container-{{ ai_gen_id }} {
+      padding: 0 15px;
+    }
+  }
+{% endstyle %}
+
+<press-strip-{{ ai_gen_id }} class="ai-press-strip-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-press-strip-container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-press-strip-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="ai-press-strip-logos-wrapper-{{ ai_gen_id }}">
+      <div class="ai-press-strip-logos-{{ ai_gen_id }}" data-marquee-container>
+        {% for i in (1..8) %}
+          {% assign logo_key = 'logo_' | append: i %}
+          {% assign logo = block.settings[logo_key] %}
+          
+          {% if logo != blank %}
+            <div class="ai-press-strip-logo-item-{{ ai_gen_id }}">
+              <img
+                src="{{ logo | image_url: width: 400 }}"
+                alt="{{ logo.alt | escape }}"
+                class="ai-press-strip-logo-{{ ai_gen_id }}"
+                loading="lazy"
+                width="{{ block.settings.logo_width }}"
+                height="auto"
+              >
+            </div>
+          {% endif %}
+        {% endfor %}
+
+        {% if block.settings.enable_mobile_marquee %}
+          {% for i in (1..8) %}
+            {% assign logo_key = 'logo_' | append: i %}
+            {% assign logo = block.settings[logo_key] %}
+            
+            {% if logo != blank %}
+              <div class="ai-press-strip-logo-item-{{ ai_gen_id }}" aria-hidden="true">
+                <img
+                  src="{{ logo | image_url: width: 400 }}"
+                  alt="{{ logo.alt | escape }}"
+                  class="ai-press-strip-logo-{{ ai_gen_id }}"
+                  loading="lazy"
+                  width="{{ block.settings.logo_width }}"
+                  height="auto"
+                >
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</press-strip-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class PressStrip{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        const isMobile = window.matchMedia('(max-width: 749px)').matches;
+        const marqueeEnabled = {{ block.settings.enable_mobile_marquee | json }};
+        
+        if (isMobile && marqueeEnabled) {
+          this.initMarquee();
+        }
+      }
+
+      initMarquee() {
+        const container = this.querySelector('[data-marquee-container]');
+        if (!container) return;
+
+        container.addEventListener('mouseenter', () => {
+          container.style.animationPlayState = 'paused';
+        });
+
+        container.addEventListener('mouseleave', () => {
+          container.style.animationPlayState = 'running';
+        });
+      }
+    }
+
+    customElements.define('press-strip-{{ ai_gen_id }}', PressStrip{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "As featured in",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "As Seen In"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Font",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Size",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "label": "Letter spacing",
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "unit": "px",
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Bottom spacing",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Logos"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_1",
+      "label": "Logo 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_2",
+      "label": "Logo 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_3",
+      "label": "Logo 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_4",
+      "label": "Logo 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_5",
+      "label": "Logo 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_6",
+      "label": "Logo 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_7",
+      "label": "Logo 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_8",
+      "label": "Logo 8"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Width",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "logo_spacing",
+      "label": "Spacing",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "grayscale_amount",
+      "label": "Grayscale",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "logo_opacity",
+      "label": "Opacity",
+      "min": 0,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.6
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_marquee",
+      "label": "Enable marquee scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "marquee_speed",
+      "label": "Scroll speed",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "s",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "container_width",
+      "label": "Container width",
+      "min": 1000,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "As featured in"
+    }
+  ]
+}
 {% endschema %}
