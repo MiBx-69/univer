@@ -11,7 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/UNIVERSES_LOGO.webp",
     "logo_inverse": "shopify://shop_images/UNIVERSES_LOGO.webp",
-    "favicon": "shopify://shop_images/favicon.png",
+    "favicon": "shopify://shop_images/logo.svg",
     "sale_badge_color": "#0a0a0a",
     "sale_badge_background": "#c9a96e",
     "sold_out_badge_color": "#ffffff",
@@ -257,85 +257,6 @@
       }
     },
     "content_for_index": [],
-    "blocks": {
-      "2567389343055140935": {
-        "type": "shopify://apps/microsoft-clarity/blocks/clarity_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
-      },
-      "6610233760104865948": {
-        "type": "shopify://apps/brevo-pushowl/blocks/pushowl-app-embed-3d2ff2b5/fa20c3ba-38bf-43e0-ba5c-431f6ae07d95",
-        "disabled": false,
-        "settings": {}
-      },
-      "14060646107696862457": {
-        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {}
-      },
-      "13047258039897440615": {
-        "type": "shopify://apps/judge-me-reviews/blocks/cart_drawer_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": false,
-        "settings": {
-          "widget_type": "review-widget"
-        }
-      },
-      "7313114205116804392": {
-        "type": "shopify://apps/propel-replays-heatmaps/blocks/app-embed/64fbaaa3-2d4a-49f3-aba7-86e92e44999f",
-        "disabled": false,
-        "settings": {}
-      },
-      "6159598353363395418": {
-        "type": "shopify://apps/google-youtube/blocks/store_widget/14ec7bd0-ac77-49a9-9417-90752398bdff",
-        "disabled": false,
-        "settings": {
-          "widget_position": "LEFT_BOTTOM",
-          "side_margin": 36,
-          "bottom_margin": 36,
-          "mobile_side_margin": 16,
-          "mobile_bottom_margin": 46
-        }
-      },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
-        "settings": {
-          "greeting_message": "",
-          "background_color": "#FFFFFF",
-          "font_color": "#000000",
-          "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
-          "button_icon": "chat_bubble",
-          "button_text": "chat_with_us",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "agent_inherit_fonts": true,
-          "agent_font": "system_ui_n4",
-          "agent_border_radius": 16
-        }
-      },
-      "13768625480086291342": {
-        "type": "shopify://apps/forms/blocks/forms/8744a304-fcb1-4347-b211-bb6b4759a76a",
-        "disabled": true,
-        "settings": {}
-      },
-      "2200952712151285029": {
-        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": true,
-        "settings": {}
-      },
-      "14784262235933562743": {
-        "type": "shopify://apps/whatomation/blocks/whatsapp_widget/019f5ba1-2ab8-7aac-9ffe-c363cb8df63b",
-        "disabled": true,
-        "settings": {
-          "proxy_url": "/apps/verify/widget-settings",
-          "header_title": "Customer Support",
-          "status_text": "Typically replies instantly",
-          "button_label": "Chat on WhatsApp"
-        }
-      }
-    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
