@@ -9,6 +9,40 @@
  */
 {
   "sections": {
+    "home_page_hero_zNiWPJ": {
+      "type": "home-page-hero",
+      "blocks": {
+        "slide_4znagq": {
+          "type": "slide",
+          "settings": {
+            "image_mobile": "shopify://shop_images/hero_image_universes.webp",
+            "image_desktop": "shopify://shop_images/hero_image_universes.webp",
+            "subheading": "AUTUMN COLLECTION 2026",
+            "heading": "Bold. Confident. Raw.",
+            "text": "A curated edit of premium menswear engineered for the uncompromising.",
+            "btn1_label": "SHOP NOW",
+            "btn1_link": "shopify://collections",
+            "btn2_label": "NEW ARRIVALS",
+            "btn2_link": "shopify://collections/new-arrival"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4znagq"
+      ],
+      "name": "Home Page Hero",
+      "settings": {
+        "overlay_opacity": 100,
+        "show_features": true,
+        "heading_size_mobile": 48,
+        "heading_size_desktop": 64,
+        "subheading_size": 11,
+        "text_size": 16,
+        "button_font_size": 12,
+        "button_padding_v": 14,
+        "button_padding_h": 24
+      }
+    },
     "17841805206947be4f": {
       "type": "_blocks",
       "blocks": {
@@ -41,7 +75,7 @@
             "nav_button_hover_color": "#ffffff",
             "category_1_enabled": true,
             "category_1_name": "Bootcut",
-            "category_1_image": "shopify://shop_images/ChatGPT_Image_Jul_21_2026_04_54_04_PM.png",
+            "category_1_image": "shopify://shop_images/IMG_5129_8896e4c2-8f57-40c3-8fa0-4c148e789414.jpg",
             "category_1_url": "shopify://collections/bootcut-jeans",
             "category_2_enabled": true,
             "category_2_name": "T-shirts",
@@ -165,40 +199,6 @@
         "ai_gen_block_2e0003a_FteMaD"
       ],
       "settings": {}
-    },
-    "home_page_hero_zNiWPJ": {
-      "type": "home-page-hero",
-      "blocks": {
-        "slide_4znagq": {
-          "type": "slide",
-          "settings": {
-            "image_mobile": "shopify://shop_images/hero_image_universes.webp",
-            "image_desktop": "shopify://shop_images/hero_image_universes.webp",
-            "subheading": "AUTUMN COLLECTION 2026",
-            "heading": "Bold. Confident. Raw.",
-            "text": "A curated edit of premium menswear engineered for the uncompromising.",
-            "btn1_label": "SHOP NOW",
-            "btn1_link": "shopify://collections",
-            "btn2_label": "NEW ARRIVALS",
-            "btn2_link": "shopify://collections/new-arrival"
-          }
-        }
-      },
-      "block_order": [
-        "slide_4znagq"
-      ],
-      "name": "Home Page Hero",
-      "settings": {
-        "overlay_opacity": 100,
-        "show_features": true,
-        "heading_size_mobile": 48,
-        "heading_size_desktop": 64,
-        "subheading_size": 11,
-        "text_size": 16,
-        "button_font_size": 12,
-        "button_padding_v": 14,
-        "button_padding_h": 24
-      }
     },
     "section_9z3FDA": {
       "type": "section",
