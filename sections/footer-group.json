@@ -366,7 +366,7 @@
                         "custom_width": 80,
                         "svg_height": "fit-content",
                         "custom_height": 80,
-                        "image_upload": "shopify://shop_images/whatsapp-svgrepo-com.svg",
+                        "image_upload": "shopify://shop_images/whatsapp-svgrepo-com_1.svg",
                         "link": "https://wa.me/8801805205867",
                         "open_in_new_tab": false,
                         "width": 24,
@@ -777,7 +777,7 @@
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
-                    "menu": "policies",
+                    "menu": "",
                     "heading": "Information",
                     "margin-block-end": 10,
                     "content_direction": "column",
@@ -827,7 +827,7 @@
                   "type": "menu",
                   "name": "t:names.menu",
                   "settings": {
-                    "menu": "customer-care",
+                    "menu": "",
                     "heading": "Customer Service",
                     "margin-block-end": 10,
                     "content_direction": "column",
