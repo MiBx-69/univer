@@ -9,56 +9,6 @@
  */
 {
   "sections": {
-    "1784527840f4b518be": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_be541d1_gPErxy": {
-          "type": "ai_gen_block_be541d1",
-          "settings": {
-            "background_image": "shopify://shop_images/hero_image_universes.webp",
-            "background_video": "",
-            "overlay_opacity_top": 0.3,
-            "overlay_opacity_bottom": 0.6,
-            "heading": "Crafted for the Modern Gentleman",
-            "subheading": "Discover premium imported menswear crafted for confidence, elegance, and timeless style. Every piece is carefully selected to deliver exceptional quality, superior comfort, and a refined look for the modern gentleman.",
-            "text_alignment": "center",
-            "content_max_width": 800,
-            "text_color": "#ffffff",
-            "heading_font": "serif",
-            "heading_size": 72,
-            "heading_size_mobile": 36,
-            "heading_spacing": 24,
-            "heading_spacing_mobile": 16,
-            "subheading_font": "system_ui_n4",
-            "subheading_size": 18,
-            "subheading_size_mobile": 14,
-            "subheading_spacing": 32,
-            "subheading_spacing_mobile": 20,
-            "button_text": "Shop Now",
-            "button_link": "shopify://collections/all-products-chatgpt-ai-product-description",
-            "button_font_size": 14,
-            "button_font_size_mobile": 12,
-            "button_padding_vertical": 16,
-            "button_padding_horizontal": 48,
-            "button_padding_vertical_mobile": 12,
-            "button_padding_horizontal_mobile": 32,
-            "button_background": "rgba(0,0,0,0)",
-            "button_text_color": "#ffffff",
-            "button_border_width": 2,
-            "button_border_color": "#ffffff",
-            "button_hover_background": "#ffffff",
-            "button_hover_text_color": "#000000",
-            "button_hover_border_color": "#ffffff",
-            "mobile_height": 70
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_be541d1_gPErxy"
-      ],
-      "settings": {}
-    },
     "17841805206947be4f": {
       "type": "_blocks",
       "blocks": {
@@ -215,6 +165,40 @@
         "ai_gen_block_2e0003a_FteMaD"
       ],
       "settings": {}
+    },
+    "home_page_hero_zNiWPJ": {
+      "type": "home-page-hero",
+      "blocks": {
+        "slide_4znagq": {
+          "type": "slide",
+          "settings": {
+            "image_mobile": "shopify://shop_images/hero_image_universes.webp",
+            "image_desktop": "shopify://shop_images/hero_image_universes.webp",
+            "subheading": "AUTUMN COLLECTION 2026",
+            "heading": "Bold. Confident. Raw.",
+            "text": "A curated edit of premium menswear engineered for the uncompromising.",
+            "btn1_label": "SHOP NOW",
+            "btn1_link": "shopify://collections",
+            "btn2_label": "NEW ARRIVALS",
+            "btn2_link": "shopify://collections/new-arrival"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4znagq"
+      ],
+      "name": "Home Page Hero",
+      "settings": {
+        "overlay_opacity": 100,
+        "show_features": true,
+        "heading_size_mobile": 48,
+        "heading_size_desktop": 64,
+        "subheading_size": 11,
+        "text_size": 16,
+        "button_font_size": 12,
+        "button_padding_v": 14,
+        "button_padding_h": 24
+      }
     },
     "section_9z3FDA": {
       "type": "section",
@@ -931,7 +915,7 @@
     }
   },
   "order": [
-    "1784527840f4b518be",
+    "home_page_hero_zNiWPJ",
     "17841805206947be4f",
     "section_9z3FDA",
     "slideshow_C6dxVH",
