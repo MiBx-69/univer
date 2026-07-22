@@ -1172,6 +1172,22 @@
       "sms_unsubscribe_confirm": {
         "message": "আপনি কি সত্যিই এসএমএস মার্কেটিং থেকে সদস্যতা ত্যাগ করতে চান?"
       }
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "twenty_four_hours": "সাধারণত ২৪ ঘণ্টার মধ্যে প্রস্তুত হয়ে যায়",
+        "two_to_four_days": "সাধারণত ২-৪ দিনের মধ্যে প্রস্তুত হয়",
+        "five_or_more_days": "সাধারণত ৫+ দিনে প্রস্তুত হয়",
+        "zero_to_two_hours": "সাধারণত ২ ঘণ্টার মধ্যে প্রস্তুত হয়ে যায়",
+        "two_to_four_hours": "সাধারণত ৪ ঘণ্টার মধ্যে প্রস্তুত হয়ে যায়",
+        "immediately": "এখনই নেওয়ার জন্য প্রস্তুত",
+        "next_day": "পরের দিন সংগ্রহের জন্য প্রস্তুত"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "এই আইটেমটি একটি পুনরাবৃত্ত বা স্থগিত কেনাকাটা। চালিয়ে যাওয়ার মাধ্যমে, আমি %{cancellationPolicyLink} সম্মত হচ্ছি এবং আমার অর্ডার পূরণ না হওয়া পর্যন্ত অথবা, যদি অনুমতি দেওয়া হয়, আমি বাতিল না করা পর্যন্ত এই পৃষ্ঠায় তালিকাভুক্ত মূল্য, ফ্রিকোয়েন্সি এবং তারিখে আমার পেমেন্ট পদ্ধতি চার্জ করার জন্য আপনাকে অনুমতি দিচ্ছি।",
+      "buyer_consent_cart": "আপনার কার্টের এক বা একাধিক আইটেম একটি পুনরাবৃত্ত বা স্থগিত কেনাকাটা। চালিয়ে যাওয়ার মাধ্যমে, আমি %{cancellationPolicyLink} সম্মত হচ্ছি এবং আপনাকে আমার পেমেন্টের পদ্ধতি থেকে এই পৃষ্ঠায় তালিকাভুক্ত মূল্য, ফ্রিকোয়েন্সি এবং তারিখ অনুযায়ী চার্জ করার অনুমতি দিচ্ছি যতক্ষণ না আমার অর্ডার পূরণ হচ্ছে অথবা আমি বাতিল করছি, যদি অনুমতি দেওয়া হয়।",
+      "cancellation_policy": "বাতিলকরণ নীতি"
     }
   },
   "customer_accounts": {
@@ -1179,19 +1195,88 @@
       "back_button_accessibility_label": "পিছনে",
       "loading_section_accessibility_label": "লোডিং {{sectionName}}",
       "policy_load_error": "{{policyName}} লোড করা যায়নি",
-      "policy_try_again": "আবার চেষ্টা করুন"
+      "policy_try_again": "আবার চেষ্টা করুন",
+      "account_menu": {
+        "hide_accessibility_label": "অ্যাকাউন্ট মেনু লুকান",
+        "show_accessibility_label": "অ্যাকাউন্ট মেনু দেখান",
+        "nav_accessibility_label": "অ্যাকাউন্ট নেভিগেশন",
+        "open_menu_accessibility_label": "অ্যাকাউন্ট খুলুন নেভিগেশন",
+        "close_menu_accessibility_label": "অ্যাকাউন্ট বন্ধ করুন নেভিগেশন",
+        "label": "হিসাব",
+        "loading_message": "অ্যাকাউন্ট নেভিগেশন লোড হচ্ছে"
+      },
+      "action_menu_accessibility_label": "আরও অপশনগুলি",
+      "go_to_store_link": "দোকানে যাও",
+      "orders_link_label": "আদেশসমূহ",
+      "subscriptions_link_label": "সদস্যতাগুলি",
+      "close_menu_accessibility_label": "প্রধান নেভিগেশন বন্ধ করুন",
+      "contact_email_subject": "{{shopName}} অনলাইন স্টোর থেকে যোগাযোগ করুন",
+      "contact_link": "যোগাযোগের তথ্য",
+      "delete_confirmation": {
+        "cancel": "বাতিল করুন",
+        "delete": "মুছে দিন"
+      },
+      "dismiss_toast": "খারিজ করুন",
+      "document_title": "{{sectionName}} - {{shopName}} - অ্যাকাউন্ট",
+      "loading_message": "লোড হচ্ছে",
+      "loading_policy_content_accessibility_label": "নীতি সামগ্রী লোড করা হচ্ছে",
+      "log_out_link": "সাইন আউট করুন",
+      "logout_overlay_label": "সাইন আউট করা হচ্ছে...",
+      "nav_label_accessibility_label": "মূল নেভিগেশন",
+      "navigation_accessibility_message": "আপনি {{sectionName}}-এ নেভিগেট করেছেন",
+      "open_menu_accessibility_label": "মূল নেভিগেশন খুলুন",
+      "shop_logo_accessibility_label": "{{shopName}} লোগো",
+      "store_credit_accessibility_label": "{{formattedBalance}} স্টোর ক্রেডিট",
+      "store_credit_balances_list_accessibility_label": "স্টোর ক্রেডিট ব্যালেন্স",
+      "store_credit_multi_currency_accessibility_label": {
+        "one": "{{formattedBalance}} এবং আরও {{count}} কারেন্সি স্টোর ক্রেডিট",
+        "other": "{{formattedBalance}} এবং আরও {{count}} কারেন্সির স্টোর ক্রেডিট"
+      },
+      "settings_link": "সেটিংস",
+      "country_switcher_toast_message": "দেশ পরিবর্তন করে {{countryName}} করা হয়েছে",
+      "switch_country": "দেশ পরিবর্তন করুন",
+      "no_countries_found": "কোনো দেশ খুঁজে পাওয়া যায়নি",
+      "location_switcher_toast_message": "অবস্থান পরিবর্তন করে {{locationName}} করা হয়েছে",
+      "switch_location": "অবস্থান পরিবর্তন করুন",
+      "no_locations_found": "কোনো অবস্থান পাওয়া যায়নি",
+      "try_new_search": "নতুন করে খুঁজুন",
+      "view_details": "বিস্তারিত দেখুন",
+      "company_location": "কোম্পানির অবস্থান",
+      "search": "অনুসন্ধান",
+      "skip_to_content": "বিষয়বস্তুতে যান"
     },
     "account_information": {
       "profile_card": {
         "edit": "সম্পাদনা",
         "save": "সংরক্ষণ করুন",
-        "email": "ইমেইল"
+        "email": "ইমেইল",
+        "cancel": "বাতিল করুন",
+        "cancel_accessibility_label": "প্রোফাইল সম্পাদনা বাতিল করুন",
+        "edit_accessibility_label": "প্রোফাইল সম্পাদন করুন",
+        "email_help_text": "ইমেইল এডিট করা যাবে না",
+        "editable_email_help_text": "এই ইমেইলটি সাইন-ইন এবং অর্ডারের আপডেট-এর জন্য ব্যবহৃত হয়।",
+        "first_name": "নামের প্রথম অংশ",
+        "last_name": "পদবি",
+        "no_name_provided_accessibility_label": "কোনো নাম যোগ করা হয়নি",
+        "phone_number_help_text": "ফোন নম্বর এডিট করা যাবে না",
+        "save_accessibility_label": "প্রোফাইল সংরক্ষণ করুন",
+        "title": "প্রোফাইল",
+        "errors": {
+          "name_too_long": "{{fieldName}} খুব লম্বা (সর্বোচ্চ ২৫৫টি অক্ষর হতে পারে)",
+          "name_cannot_contain_url": "{{fieldName}} কোনো URL থাকতে পারে না",
+          "name_cannot_contain_html_tags": "{{fieldName}}-এ HTML ট্যাগ থাকতে পারবে না",
+          "email_cant_be_blank": "ইমেল খালি হতে পারে না",
+          "invalid_email_format": "একটি বৈধ ইমেইল লিখুন"
+        }
       },
       "verify_current_email_modal": {
         "verify_button": "পরবর্তী",
         "description": "আপনার আসল ইমেইলে পাঠানো ৬-সংখ্যার কোডটি লিখুন:",
         "title": "নিশ্চিত করুন এটা আপনি",
-        "verify_button_accessibility_label": "আপনার বর্তমান ইমেল যাচাই করুন"
+        "verify_button_accessibility_label": "আপনার বর্তমান ইমেল যাচাই করুন",
+        "cancel_button": "বাতিল করুন",
+        "cancel_button_accessibility_label": "প্রোফাইল সম্পাদনা বাতিল করুন",
+        "email_resend_button_accessibility_label": "যাচাইকরণ কোড আবার পাঠান"
       },
       "marketing_preferences": {
         "email_label": "ইমেইল",
@@ -1199,23 +1284,44 @@
         "title": "মার্কেটিং পছন্দগুলি",
         "unsubscribe_confirmation": {
           "description": "আপনি আর {{shopName}}-এর থেকে ইমেল মার্কেটিং পাবেন না",
-          "title": "ইমেইল থেকে আনসাবস্ক্রাইব করতে চান?"
+          "title": "ইমেইল থেকে আনসাবস্ক্রাইব করতে চান?",
+          "cancel": "বাতিল করুন",
+          "unsubscribe": "সদস্যতা ত্যাগ করুন"
         },
         "update_error": {
           "description": "আপনার বিপণন পছন্দগুলি আপডেট করার সময় একটি সমস্যা হয়েছে। এই পৃষ্ঠাটি রিফ্রেশ করার চেষ্টা করুন অথবা আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।"
         },
-        "update_success": "বিপণন পছন্দগুলি আপডেট করা হয়েছে"
+        "update_success": "বিপণন পছন্দগুলি আপডেট করা হয়েছে",
+        "resend_email": "ইমেলটি আবার পাঠান",
+        "resend_email_success": "লিঙ্ক পাঠানো হয়েছে"
       },
       "add_button": "যোগ করুন",
       "verify_new_email_modal": {
         "title": "আপনার নতুন ইমেল যাচাই করুন",
-        "description": "এখন, আপনার নতুন ইমেইলে পাঠানো ৬-সংখ্যার কোডটি প্রবেশ করান:"
+        "description": "এখন, আপনার নতুন ইমেইলে পাঠানো ৬-সংখ্যার কোডটি প্রবেশ করান:",
+        "one_time_password_label": "৬-সংখ্যার কোড",
+        "email_resend_button": "কোড পুনরায় পাঠান",
+        "email_resend_button_accessibility_label": "যাচাইকরণ কোড আবার পাঠান",
+        "verify_button": "যাচাই করুন",
+        "verify_button_accessibility_label": "ওয়ান টাইম পাসওয়ার্ড যাচাই করুন",
+        "cancel_button": "বাতিল করুন",
+        "cancel_button_accessibility_label": "প্রোফাইল সম্পাদনা বাতিল করুন",
+        "email_resend_button_success_toast_message": "যাচাইকরণ কোড পাঠানো হয়েছে",
+        "email_resend_button_failure_banner_message": "যাচাইকরণ কোড পাঠানো যায়নি"
       },
       "people": {
         "pagination": {
           "load_more_accessibility_label": "আরও লোক দেখান"
         }
-      }
+      },
+      "loading_accessibility_message": "অ্যাকাউন্ট লোড হচ্ছে",
+      "loading_finished_accessibility_message": "অ্যাকাউন্টের তথ্য লোড করা হয়েছে",
+      "email_update_success_modal": {
+        "title": "ইমেল যাচাই করুন",
+        "description": "ইমেল সফলভাবে আপডেট করা হয়েছে। লগইনে পুনঃনির্দেশিত করা হচ্ছে।"
+      },
+      "profile_update_confirmation_message": "প্রোফাইল আপডেট করা হয়েছে",
+      "email_update_confirmation_message": "ইমেল আপডেট করা হয়েছে {{email}}-এ"
     },
     "orders": {
       "order_list": {
@@ -1564,6 +1670,24 @@
     },
     "callback": {
       "try_again": "আবার চেষ্টা করুন"
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "one": "{{count}} মিনিট আগে",
+          "other": "{{count}} মিনিট আগে"
+        },
+        "lessThanOneMinuteAgo": "এইমাত্র",
+        "yesterday": "গতকাল {{time}} এ",
+        "today": "আজ {{time}}-এ",
+        "tomorrow": "আগামীকাল {{time}}"
+      }
+    },
+    "enable_javascript": "আপনার অ্যাকাউন্ট দেখতে, আপনার ব্রাউজারের সেটিংসে JavaScript চালু করুন অথবা অন্য কোনো ব্রাউজার থেকে সাইন ইন করুন।",
+    "announcement_bar": {
+      "expand_label": "ঘোষণা বার প্রসারিত করুন",
+      "collapse_label": "ঘোষণা বার সঙ্কুচিত করুন",
+      "close_label": "ঘোষণাপট বন্ধ করুন"
     }
   },
   "accessibility": {
