@@ -1200,30 +1200,88 @@
       "order_payment_collection": {
         "changes_summary": {
           "added": {
-            "one": "যোগ করা হয়েছে"
-          }
-        }
+            "one": "যোগ করা হয়েছে",
+            "other": "যোগ করা হয়েছে %{count}টি"
+          },
+          "removed": "অপসারণ করা হয়েছে",
+          "subtracted": "%{count}টি মুছে ফেলা হয়েছে",
+          "returned": "ফেরত দেওয়া হয়েছে %{count}টি",
+          "return_line_item_removed": "রিটার্ন থেকে %{count} সরানো হয়েছে"
+        },
+        "custom_line_item_description": "অর্ডার %{order_name} এর জন্য পরিশোধের পরিমাণ",
+        "additional_payment_requested": "%{total_outstanding} টাকা পরিশোধ করা আবশ্যক",
+        "checkout_review_and_pay": "আপনার অর্ডার %{order_name} আপডেট করা হয়েছে। এই পরিবর্তনগুলি পর্যালোচনা করুন, তারপর আপনার অর্ডার নিশ্চিত করতে অর্থপ্রদান করুন।",
+        "order_updated_on": "আপনার অর্ডার %{last_edited_at} এ আপডেট করা হয়েছিল।",
+        "order_review_and_pay": "আপনার অর্ডার আপডেট করা হয়েছে। আপনার অর্ডার নিশ্চিত করতে পর্যালোচনা করুন এবং অর্থপ্রদান করুন।",
+        "pay_now": "এখনই পরিশোধ করুন"
       },
       "subscriptions": {
         "recurring_total_intervals": {
           "month": {
-            "one": "মাস"
+            "one": "মাস",
+            "other": "%{count} মাস"
           },
           "day": {
-            "one": "দিন"
+            "one": "দিন",
+            "other": "%{count} দিন"
           },
           "week": {
-            "one": "সপ্তাহ"
+            "one": "সপ্তাহ",
+            "other": "%{count} সপ্তাহ"
           },
           "year": {
-            "one": "বছর"
+            "one": "বছর",
+            "other": "% {count} বছর"
+          }
+        },
+        "recurring_totals": "প্রতি %{interval} এর জন্য %{total_price}",
+        "recurring_totals_with_initial_order_shipping_discount": "প্রথম পেমেন্ট %{total_price_with_discount}, তারপর %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "প্রথম কিস্তি %{total_price}",
+            "other": "প্রথম %{count}টি পেমেন্ট, প্রতিটি %{total_price}"
+          },
+          "following_cycles": ", তারপর প্রতি %{interval} তে %{total_price}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", তারপর %{total_price} করে %{count}টি পেমেন্ট",
+            "other": ", তারপর প্রতি কিস্তিতে %{total_price} হিসেবে %{count}টি পেমেন্ট"
           }
         }
       },
       "throttle": {
         "title": "সারি",
         "too_many_attempts": {
-          "description": "কয়েক মিনিট পর আবার চেষ্টা করুন"
+          "description": "কয়েক মিনিট পর আবার চেষ্টা করুন",
+          "message": "অনেক বেশি প্রচেষ্টা"
+        },
+        "line_to_check_out": "আপনি চেকআউট করার জন্য লাইনে আছেন",
+        "cart_summary_heading": "আপনার কার্ট",
+        "merchandise": {
+          "available": "উপস্থিত",
+          "sold_out": "বিক্রি হয়ে গেছে"
+        },
+        "inventory": {
+          "partial_inventory_banner": "আপনার কার্টের কিছু অংশ বিক্রি হয়ে গেছে এবং চেকআউটের সময় কেনার জন্য উপলব্ধ হবে না।",
+          "sold_out": {
+            "heading": "আপনার কার্ট খালি হয়ে গেছে",
+            "storefront_body": "কেনাকাটা চালিয়ে যেতে স্টোরে ফিরে যান",
+            "no_storefront_body": "দুঃখিত, আপনি যে জিনিসটি কিনতে চান তা আর পাওয়া যাচ্ছে না।",
+            "link": "দোকানে ফিরে যান"
+          }
+        },
+        "time_to_checkout_title": "চেকআউট করার সময় - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "আনুমানিক অপেক্ষার সময় গণনা করা হচ্ছে",
+          "less_than_one": "আনুমানিক অপেক্ষার সময়: এক মিনিটের কম",
+          "one": "আনুমানিক অপেক্ষার সময়: {{count}} মিনিট",
+          "other": "আনুমানিক অপেক্ষার সময়: {{count}} মিনিট"
+        },
+        "last_checked": "(সর্বশেষ যাচাই: {{time}})",
+        "footer": {
+          "heading": "এই পাতা রিফ্রেশ করবেন না, এটি স্বয়ংক্রিয়ভাবে আপডেট হবে।",
+          "body": "আপনার শপিং কার্টে যোগ করা পণ্যগুলি অর্থপ্রদান সম্পন্ন না হওয়া পর্যন্ত সংরক্ষিত থাকবে না।"
         }
       },
       "units": {
@@ -1487,11 +1545,20 @@
         "unavailable_policy": "এই স্টোরের জন্য কোনো %{policy_name} প্রদান করা হয়নি। আরও তথ্যের জন্য, সরাসরি %{shop_name}-এর সাথে যোগাযোগ করুন।"
       },
       "change_country": {
-        "currency_updated_for_country": "%{country} এর জন্য মুদ্রা আপডেট করা হয়েছে"
+        "currency_updated_for_country": "%{country} এর জন্য মুদ্রা আপডেট করা হয়েছে",
+        "cart_updated_based_on_country": "আপনার শিপিং দেশের উপর ভিত্তি করে আপনার কার্ট আপডেট করা হয়েছে।",
+        "cart_and_currency_updated_based_on_country": "আপনার শিপিং দেশ অনুসারে আপনার কার্ট এবং মুদ্রা আপডেট করা হয়েছে।"
       },
       "tips": {
         "not_available_with_spi": "শপ পে কিস্তির মাধ্যমে উপলব্ধ নয়",
-        "no_tip_label": "কোনটিই নয়"
+        "no_tip_label": "কোনটিই নয়",
+        "title": "বখশিশ যোগ করুন",
+        "description": "%{shop_name} টিমের প্রতি আপনার সমর্থন দেখান",
+        "presets_description": "একটি টিপ শতাংশ নির্বাচন করুন",
+        "custom_label": "কাস্টম টিপ",
+        "add_tip": "বখশিশ যোগ করুন",
+        "update_tip": "আপডেট টিপ",
+        "message": "ধন্যবাদ, আমরা এর প্রশংসা করি।"
       },
       "cart_checkout_validation": {
         "runtime_error": "আপনার অনুরোধ প্রক্রিয়া করণে একটি সমস্যা হয়েছে। দোকানের মালিকের সাথে যোগাযোগ করুন।"
@@ -1539,7 +1606,38 @@
       "pickup_point": {
         "or": "অথবা",
         "selector_tab_map": "মানচিত্র",
-        "selector_tab_list": "তালিকা"
+        "selector_tab_list": "তালিকা",
+        "location_is_currently_closed": "বন্ধ",
+        "business_hours": "খোলার সময়",
+        "no_business_hours": "কোনো খোলার সময় উপলব্ধ নেই",
+        "open_twenty_four_hours": "২৪/৭ খোলা",
+        "title": "পিকআপ পয়েন্ট",
+        "search_button": "অনুসন্ধান",
+        "address_label": "ঠিকানা",
+        "selector_tabs": "পিকআপ পয়েন্ট নির্বাচক",
+        "could_not_resolve_address": "আপনার ঠিকানা খুঁজে পাওয়া যায়নি। আবার চেষ্টা করুন অথবা অন্য একটি ঠিকানা ব্যবহার করুন।",
+        "no_pickup_points_near_you": "নির্বাচিত ঠিকানার কাছাকাছি কোনো পিকআপ পয়েন্ট পাওয়া যায়নি",
+        "no_pickup_points_near_location": "আপনার অবস্থানের কাছাকাছি কোনো পিকআপ পয়েন্ট পাওয়া যায়নি",
+        "pickup_unavailable_banner_title": {
+          "one": "আপনার আইটেমের জন্য কোনো পিকআপ পয়েন্ট নেই",
+          "other": "আপনার জিনিসপত্রের জন্য কোনো পিকআপ পয়েন্ট উপলব্ধ নেই"
+        },
+        "no_pickup_points_found": "কোনো পিকআপ পয়েন্ট পাওয়া যায়নি",
+        "paginator": {
+          "next_accessibility_label": "পরবর্তী পৃষ্ঠা",
+          "previous_accessibility_label": "পূর্বের পৃষ্ঠা",
+          "header": {
+            "one": "%{count} পয়েন্টের মধ্যে %{first} - %{last} দেখাচ্ছে",
+            "other": "%{count}টি পয়েন্টের মধ্যে %{first} - %{last} দেখানো হচ্ছে"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{count}টি পয়েন্টের মধ্যে %{pickup_point_index}",
+            "other": "%{count}টি পয়েন্টের মধ্যে %{pickup_point_index}"
+          },
+          "selected_page": {
+            "one": "%{first} - %{count} পয়েন্টের মধ্যে %{last}"
+          }
+        }
       },
       "address_management": {
         "saved_with_store": "এই স্টোরের সাথে সংরক্ষিত"
@@ -1675,6 +1773,58 @@
         "payment_not_processed_title": "আপনার অর্থপ্রদান সম্পন্ন করা যায়নি।",
         "payment_not_processed_text": "আপনাকে চার্জ করা হয়নি। আপনার কেনাকাটা সম্পন্ন করতে আপনার কার্টে ফিরে যান।",
         "return_to_cart_button_label": "কার্টে ফিরে যান"
+      },
+      "markets": {
+        "invalid_market_manager_error": "পেমেন্ট সম্পন্ন করার আগে আপনার যোগাযোগের তথ্য পর্যালোচনা করুন"
+      },
+      "notifications": {
+        "title": "বিজ্ঞপ্তিগুলি"
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "আপনার ক্রেডিট কার্ড থেকে %{amount} কেটে নেওয়া হবে",
+        "payment_total_label": "মোট পেমেন্ট",
+        "conversion_rate": "১ %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "%{currency_name} তে পরিবর্তন করুন",
+        "card_provider_fx_charges_warning": "আপনার কার্ড প্রদানকারী %{currency_code} লেনদেনের উপর ফি চার্জ করতে পারে।",
+        "currency_not_supported_by_shop": "আপনার নির্বাচিত মুদ্রা এখন আর উপলব্ধ নয়। সমস্ত মূল্য এখন %{currency_code} এ আছে।"
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "আপনার দেশ/অঞ্চল আপডেট করা হয়েছে। কেনাকাটা চালিয়ে যেতে আপনার শিপিং ঠিকানা লিখুন।"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "%{product_name} কিনুন",
+          "one": "%{product_name} এবং আরও %{count}টি জিনিস কিনুন",
+          "other": "%{product_name} এবং আরও %{count}টি জিনিস কিনুন"
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "পেমেন্ট পদ্ধতি",
+        "title": "পেমেন্ট পদ্ধতি",
+        "update_card_button_label": "কার্ড আপডেট করুন",
+        "delete_customer_mandate": {
+          "generic_error": "আপনার অনুরোধ প্রক্রিয়া করতে একটি সমস্যা হয়েছে।",
+          "success_message": "আপনার অর্থপ্রদানের পদ্ধতি সফলভাবে মুছে ফেলা হয়েছে"
+        }
+      },
+      "no_address_location": {
+        "title": "ঠিকানাবিহীন অবস্থান",
+        "header": "এই অবস্থানের জন্য আপনার কাছে কোনো শিপিং ঠিকানা নেই",
+        "alt_header": "শিপিং ঠিকানা অনুপস্থিত",
+        "message": "চেকআউট সম্পূর্ণ করতে এই অবস্থানের জন্য একটি ঠিকানা যোগ করতে আমাদের সাথে যোগাযোগ করুন।",
+        "email_us_button_label": "আমাদের একটি ইমেল পাঠান"
+      },
+      "order_errors": {
+        "creation_failure": "আপনার অর্ডার তৈরি করতে একটি সমস্যা হয়েছে। আবার চেষ্টা করুন, অথবা আরও বিস্তারিত জানার জন্য আমাদের সাথে যোগাযোগ করুন।",
+        "network_failure": "নেটওয়ার্ক সমস্যার কারণে আপনার অর্ডার জমা দেওয়া যায়নি। আপনার সংযোগ পরীক্ষা করুন এবং আবার চেষ্টা করুন।",
+        "inventory_reservation_failure": "কিছু জিনিস এখন আর পাওয়া যাচ্ছে না।"
+      },
+      "session_errors": {
+        "session_not_unique": "আপনার অর্ডার প্রক্রিয়া করতে সমস্যা হয়েছে। স্টোরে ফিরে যেতে এই পৃষ্ঠাটি রিফ্রেশ করুন।",
+        "session_already_finished": "এই অর্ডারটি ইতিমধ্যে জমা দেওয়া হয়েছে। নতুন অর্ডার শুরু করার জন্য আপনি দোকানে ফিরে যেতে পারেন।"
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "আপনার অর্ডার প্রক্রিয়া করতে সমস্যা হয়েছে। অনুগ্রহ করে কয়েক মিনিট পর আবার চেষ্টা করুন।"
       }
     },
     "sentence": {
