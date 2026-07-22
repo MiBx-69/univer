@@ -810,8 +810,14 @@
       },
       "post_purchase": {
         "components": {
-          "close": "বন্ধ করা"
-        }
+          "close": "বন্ধ করা",
+          "expand": "আরও দেখুন",
+          "processing": "প্রক্রিয়াকরণ চলছে...",
+          "submit": "জমা দিন"
+        },
+        "title": "ক্রয়-পরবর্তী",
+        "escape_confirmation": "আপনি আপনার অর্ডারের জন্য অর্থ পরিশোধ করেছেন।",
+        "escape_action": "অর্ডার নিশ্চিতকরণ দেখুন ›"
       },
       "thank_you": {
         "announcement": {
@@ -821,7 +827,39 @@
         "checkout_again": "আবার দেখুন",
         "order_status_confirmed_with_installments_payment_return": "বিক্রয় সহযোগীর দিকে আবার মনোযোগ দিন।",
         "ready_for_pickup_description": "আপনার অর্ডার প্রস্তুত আছে। অর্ডার নেওয়ার সময় আপনার অর্ডার নিশ্চিতকরণ সঙ্গে আনুন।",
-        "order_updates_subscribe_to_email_notifications_failed": "আমরা আপডেটের জন্য এই ইমেলটি সংরক্ষণ করতে পারছি না। আবার চেষ্টা করুন অথবা অন্য একটি ইমেল ব্যবহার করুন।"
+        "order_updates_subscribe_to_email_notifications_failed": "আমরা আপডেটের জন্য এই ইমেলটি সংরক্ষণ করতে পারছি না। আবার চেষ্টা করুন অথবা অন্য একটি ইমেল ব্যবহার করুন।",
+        "title": "আপনার কেনাকাটার জন্য আপনাকে ধন্যবাদ!",
+        "confirmation_email_sent_text": "একটি নিশ্চিতকরণ ইমেল %{email}-এ পাঠানো হয়েছে",
+        "return_to_store_link_label": "কেনাকাটা চালিয়ে যান",
+        "print_link_label": "রসিদ প্রিন্ট করুন",
+        "payment_information_title": "পেমেন্টের তথ্য",
+        "shipping_information_title": "শিপিংয়ের তথ্য",
+        "page_title": "আপনাকে ধন্যবাদ, %{display_name}!",
+        "page_title_no_name": "ধন্যবাদ!",
+        "purchase_order_number_title": "PO নম্বর #%{purchase_order_number}",
+        "cancelled_page_title": "অর্ডার বাতিল করা হয়েছে",
+        "failed_pending_payment_page_title": "আপনার পেমেন্টে একটি সমস্যা হয়েছে",
+        "customer_information_title": "অর্ডারের বিবরণ",
+        "contact_information_title": "যোগাযোগের তথ্য",
+        "billing_address_title": "বিলিং ঠিকানা",
+        "company_location_title": "অবস্থান",
+        "shipping_address_title": "শিপিং ঠিকানা",
+        "shipping_address_map_title": "গুগল ম্যাপে শিপিং ঠিকানার সুনির্দিষ্ট অবস্থান দেখানো হচ্ছে: %{address}",
+        "payment_method_title": "পেমেন্ট পদ্ধতি",
+        "payment_method_not_charged": "চার্জ করা হয়নি",
+        "shipping_method_title": "শিপিং পদ্ধতি",
+        "tracking_number": "ট্র্যাকিং নম্বর:",
+        "company_tracking_number": "%{company} ট্র্যাকিং নম্বর:",
+        "estimated_arrival": "আনুমানিক ডেলিভারি তারিখ:",
+        "estimated_delivery": "বর্তমান আনুমানিক ডেলিভারি সময়: ",
+        "re-order": "একই জিনিসগুলি পুনরায় সাজান",
+        "confirmed": "নিশ্চিত করা হয়েছে",
+        "confirmed_items_count": "মোট %{total_count}টির মধ্যে %{confirmed_count}টি আইটেম নিশ্চিত করা হয়েছে",
+        "items_fulfilled_by_store": {
+          "one": "আপনার কেনা জিনিসগুলি %{remote_shop_name} থেকে আসবে।",
+          "other": "আপনার কেনা জিনিসগুলি অন্য দোকান থেকে আসবে।"
+        },
+        "gift_card_confirmation_by_text": "আপনি যদি এটি না পেয়ে থাকেন, তাহলে টেক্সটটি আবার পাঠান অথবা আমাদের সাথে যোগাযোগ করুন।"
       },
       "review": {
         "item_header": {
@@ -1048,12 +1086,52 @@
       "payment_challenge_modal": {
         "qr_code": {
           "wechat_instructions": "আপনার ফোনে উইচ্যাট অ্যাপ ব্যবহার করে এই কিউআর কোডটি স্ক্যান করে চাইনিজ ইউয়ানে আপনার কেনাকাটা সম্পন্ন করুন।",
-          "wechat_instructions_mobile": "আপনার কেনাকাটা চাইনিজ ইউয়ানে সম্পন্ন করতে অন্য একটি ডিভাইসে উইচ্যাট অ্যাপ দিয়ে এই কিউআর কোডটি স্ক্যান করুন।"
-        }
+          "wechat_instructions_mobile": "আপনার কেনাকাটা চাইনিজ ইউয়ানে সম্পন্ন করতে অন্য একটি ডিভাইসে উইচ্যাট অ্যাপ দিয়ে এই কিউআর কোডটি স্ক্যান করুন।",
+          "instructions": "আপনার {{paymentMethod}} কোড ব্যবহার করে আপনার কেনাকাটা সম্পূর্ণ করুন"
+        },
+        "instructions": "আপনার {{paymentMethod}} কোড ব্যবহার করে আপনার কেনাকাটা সম্পূর্ণ করুন",
+        "timer_message": "আপনার কাছে অর্থ পরিশোধের জন্য {{timeLeft}} সময় আছে",
+        "copy_text": "{{paymentMethod}} কোড কপি করুন",
+        "open_app_text": "{{paymentMethod}} অ্যাপ খুলুন",
+        "header": "{{paymentMethod}} দিয়ে পেমেন্ট করুন",
+        "external": {
+          "instructions": "এই কেনাকাটা সম্পূর্ণ করতে আপনার অ্যাপে পেমেন্ট নিশ্চিত করুন"
+        },
+        "close": "চ্যালেঞ্জটি বন্ধ করুন"
       },
       "payment_gateway": {
         "bogus_label": "টেস্ট পেমেন্ট গেটওয়ে",
-        "credit_or_debit_card_label": "ক্রেডিট/ডেবিট"
+        "credit_or_debit_card_label": "ক্রেডিট/ডেবিট",
+        "credit_card_label": "ক্রেডিট কার্ড",
+        "bank_deposit_label": "ব্যাংকে জমা",
+        "bank_account_label": "ব্যাংক অ্যাকাউন্ট",
+        "cash_on_delivery_label": "ক্যাশ অন ডেলিভারি (সিওডি)",
+        "money_order_label": "মানি অর্ডার",
+        "debit_card_label": "ডেবিট কার্ড",
+        "deferred_payment_label": "পরে পেমেন্ট পদ্ধতি বেছে নিন",
+        "fixed_payment_label": "আপনার অর্থপ্রদানের শেষ তারিখ {{dueDate}}।",
+        "generic_payment_terms": "আপনি {{translatedName}} শর্তাবলীতে আছেন। আপনার পেমেন্ট {{dueDate}} তারিখে হবে।",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} এই অবস্থানে প্রবেশাধিকার আছে এমন একটি অ্যাকাউন্টে পেমেন্ট পদ্ধতি যোগ অথবা ব্যবহার করতে।",
+            "link": "প্রবেশ করুন"
+          }
+        },
+        "direct_payment_terms": "আপনি {{translatedName}} শর্তাবলীতে আছেন। আপনার কার্ডে {{dueDate}} তারিখে চার্জ করা হবে।",
+        "fixed_direct_payment_terms": "আপনার কার্ড থেকে {{dueDate}} তারিখে চার্জ করা হবে।",
+        "order_due_on_fulfillment_choose_later": "আপনার অর্ডার পূরণ হয়ে গেলে আপনার পেমেন্ট পরিশোধের জন্য প্রস্তুত হবে।",
+        "order_due_on_fulfillment_payment": "আপনার অর্ডার সম্পন্ন হলে আপনার কার্ড থেকে অর্থ কেটে নেওয়া হবে।",
+        "order_due_on_receipt_choose_later": "প্রাপ্তির পরেই আপনার পেমেন্ট পরিশোধ করতে হবে।",
+        "order_deposit_due_now": "{{depositAmount}} আজ পাওনা হয়েছে। {{translatedName}} শর্তানুযায়ী বাকি টাকা {{dueDate}} তারিখে পাওনা হবে।",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} আজ প্রদেয়। আপনার অর্ডার পূরণ হয়ে গেলে বাকি অর্থ প্রদেয় হবে।",
+        "order_deposit_due_on_receipt": "{{depositAmount}} আজ পাওনা হয়েছে। বাকিটা পরে পাওনা হবে।",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} আজ পাওনা। {{dueDate}} তারিখে বাকি টাকা পাওনা হবে।",
+        "draft_order_payment_due_later_no_terms": "আপনার অর্ডার নিশ্চিত হওয়ার পরে আপনার পেমেন্ট নির্ধারিত হবে।",
+        "draft_order_payment_due_later_no_terms_payment_selected": "আপনার অর্ডার নিশ্চিত হওয়ার পর আপনার কার্ড থেকে অর্থ কেটে নেওয়া হবে।",
+        "draft_order_payment_due_later_terms": "অর্ডার নিশ্চিত হয়ে গেলে আপনি {{translatedName}} শর্তাবলীর অধীনে থাকবেন।",
+        "draft_order_payment_due_on_fulfillment": "আপনার অর্ডার নিশ্চিত ও পূরণ হওয়ার পর আপনার পেমেন্টের তারিখ হবে।",
+        "draft_order_deposit_due_later": "{{depositAmount}} আপনার অর্ডার নিশ্চিত হলে দিতে হবে। বাকি অর্থ {{translatedName}} শর্তাবলীর উপর হবে।",
+        "draft_order_deposit_due_on_fulfillment": "{{depositAmount}} আপনার অর্ডার নিশ্চিত হলে জমা দিতে হবে। আপনার অর্ডার পূরণ হলে বাকি অর্থ প্রদান করতে হবে।"
       },
       "marketing": {
         "sms": {
@@ -1208,6 +1286,43 @@
           },
           "label": "ডেলিভারি নেই"
         }
+      },
+      "processing": {
+        "redirecting_page_title": "পুনর্নির্দেশ করা হচ্ছে...",
+        "redirecting_title": "পুনর্নির্দেশ করা হচ্ছে...",
+        "redirecting_notice": "আমরা আপনাকে পুনঃনির্দেশিত করা পর্যন্ত অপেক্ষা করুন।",
+        "redirecting_to_bank": "{{bank}}-এ পুনঃনির্দেশ করা হচ্ছে",
+        "complete_your_purchase_title": "আপনার কেনাকাটা সম্পূর্ণ করুন",
+        "continue_to_payment_gateway_notice": "আপনার অর্থপ্রদানের তথ্য যোগ করতে পেমেন্টের জন্য এগিয়ে যান।",
+        "continue_to_payment_gateway_button_label": "পেমেন্ট-এ এগিয়ে যান",
+        "complete_your_purchase_title_error": "আপনার পেমেন্টের তথ্য ঠিক করুন",
+        "continue_to_payment_gateway_notice_error": "আপনার অর্থপ্রদানের তথ্য যাচাই করা যায়নি।",
+        "continue_to_payment_gateway_button_label_error": "পেমেন্টের তথ্য হালনাগাদ করুন",
+        "page_title": "আদেশ প্রক্রিয়াকরণ করা হচ্ছে",
+        "title": "আদেশ প্রক্রিয়াকরণ করা হচ্ছে",
+        "your_order_has_been_received_title": "আপনার অর্ডারের জন্য ধন্যবাদ",
+        "you_will_receive_confirmation": "আমরা এই মুহূর্তে অনেক অর্ডার পাচ্ছি। আপনি শীঘ্রই ইমেল বা টেক্সটের মাধ্যমে নিশ্চিতকরণ পাবেন। পরের এক ঘণ্টার মধ্যে এটি না পেলে, আমাদের জানান।",
+        "you_will_not_be_charged": "আপনাকে এখনও চার্জ করা হবে না",
+        "wait": {
+          "short": "আপনার অর্ডার প্রক্রিয়া করা হচ্ছে।",
+          "medium": {
+            "one": "আপনার অর্ডার প্রক্রিয়া করা হচ্ছে। আনুমানিক অপেক্ষার সময় %{count} মিনিট।",
+            "other": "আপনার অর্ডার প্রক্রিয়া করা হচ্ছে। আনুমানিক অপেক্ষার সময় %{count} মিনিট।"
+          },
+          "long": "আপনার অর্ডার প্রক্রিয়া হওয়ার সাথে সাথেই আপনি একটি ইমেল পাবেন। বর্তমানে অর্ডারের পরিমাণ অনেক বেশি।",
+          "no_auto_refresh_html": "যদি আপনাকে স্বয়ংক্রিয়ভাবে পুনঃনির্দেশিত না করা হয়, তাহলে %{link}।",
+          "refresh_this_page": "এই পৃষ্ঠাটি রিফ্রেশ করুন"
+        },
+        "remote_shops_payments_processing": "পেমেন্ট প্রক্রিয়াকরণ",
+        "action_required": "পদক্ষেপ প্রয়োজন",
+        "remote_checkout_count": "মোট %{total}টির মধ্যে %{current}টি"
+      },
+      "failed_payment": {
+        "page_title": "পেমেন্ট প্রক্রিয়া করা যায়নি",
+        "title": "পেমেন্ট প্রক্রিয়া করা যায়নি",
+        "payment_not_processed_title": "আপনার অর্থপ্রদান সম্পন্ন করা যায়নি।",
+        "payment_not_processed_text": "আপনাকে চার্জ করা হয়নি। আপনার কেনাকাটা সম্পন্ন করতে আপনার কার্টে ফিরে যান।",
+        "return_to_cart_button_label": "কার্টে ফিরে যান"
       }
     },
     "sentence": {
