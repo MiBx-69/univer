@@ -2993,7 +2993,16 @@
         "subscription": "সাবস্ক্রিপশন শিপিং"
       },
       "edit_summary": {
-        "added": "যোগ করা হয়েছে"
+        "added": "যোগ করা হয়েছে",
+        "added_with_quantity": "যোগ করা হয়েছে {{quantity}}",
+        "removed": "অপসারণ করা হয়েছে",
+        "removed_with_quantity": "অপসারণ করা হয়েছে {{quantity}}",
+        "updated_at": "আপনার অর্ডার {{date}} তারিখে আপডেট করা হয়েছে",
+        "returned": "ফেরত এসেছে",
+        "returned_with_quantities": "{{total}} এর মধ্যে {{delta}} ফেরত দেওয়া হয়েছে",
+        "removed_with_quantities": "{{total}}-এর মধ্যে {{delta}}টি সরানো হয়েছে",
+        "return_line_item_removed": "ফেরত থেকে বাদ দেওয়া হয়েছে",
+        "return_line_item_removed_with_quantities": "{{delta}} ফেরত থেকে সরানো হয়েছে"
       },
       "taxes": "কর",
       "total": "মোট",
@@ -3034,21 +3043,31 @@
       },
       "marketing_pending_confirmation": "নিশ্চিত করতে আপনার ইমেইলে দেওয়া লিঙ্কে ক্লিক করুন।",
       "subtotal_label_with_quantity": {
-        "other": "সাবটোটাল · {{count}}টি আইটেম"
+        "other": "সাবটোটাল · {{count}}টি আইটেম",
+        "one": "উপমোট"
       },
       "shop_order_tracking": {
         "real_time_delivery_updates_with_gift": "রিয়েল-টাইম ডেলিভারি আপডেট পান এবং শপ অ্যাপে খরচ করার জন্য {{promoAmount}} উপহার পান।",
         "shop_app_promo_amount_off": "একটি {{promoAmount}} উপহার পান",
-        "shop_app_promo_text": "{{amountOff}} শপ অ্যাপে খরচ করার জন্য"
+        "shop_app_promo_text": "{{amountOff}} শপ অ্যাপে খরচ করার জন্য",
+        "download_shop_to_track": "প্যাকেজ ট্র্যাক করতে শপ ডাউনলোড করুন",
+        "track_order_with_shop": "শপ ব্যবহার করে অর্ডার ট্র্যাক করুন",
+        "title_header": "আপনার ফোন দিয়ে স্ক্যান করুন",
+        "real_time_delivery_updates": "আপনার অর্ডার পাঠানো হয়ে গেলে দোকান আপনাকে রিয়েল-টাইম ডেলিভারি আপডেট পাঠাবে।"
       },
       "shop_pay": {
-        "usdc_rewards_terms": "USDC পুরস্কারের শর্তাবলী দেখুন"
+        "usdc_rewards_terms": "USDC পুরস্কারের শর্তাবলী দেখুন",
+        "order_completed_with": "অর্ডার সম্পন্ন হয়েছে",
+        "learn_more": "আরও জানুন"
       },
       "pagination": {
-        "load_more_accessibility_label": "আরও আইটেম দেখান"
+        "load_more_accessibility_label": "আরও আইটেম দেখান",
+        "load_more": "আরো দেখান",
+        "loading_accessibility_label": "আইটেম লোড হচ্ছে"
       },
       "vat_invoices": {
-        "label": "ভ্যাট"
+        "label": "ভ্যাট",
+        "title": "ভ্যাট চালান"
       },
       "shipment_timeline": {
         "expand_events_label": "বিস্তারিত দেখান",
@@ -3109,19 +3128,105 @@
         "exchange_subheader": "ফেরত সম্পন্ন হওয়ার পর বদলি পণ্যগুলি অর্ডারে যোগ করা হবে।"
       },
       "pickup": {
-        "pickup": "পিকআপ"
-      }
+        "pickup": "পিকআপ",
+        "pickup_location": "পিকআপের অবস্থান",
+        "pickup_point": "পিকআপ পয়েন্ট"
+      },
+      "show_items": "আইটেমগুলি দেখান",
+      "total_savings": "মোট সঞ্চয়",
+      "show_order_summary": "অর্ডারের সারাংশ দেখান",
+      "hide_order_summary": "অর্ডার সারাংশ লুকান",
+      "subtitle": "নিশ্চিত করা হয়েছে {{date}}",
+      "subtotal": "উপমোট",
+      "summary_list_title_accessibility_label": "পণ্য অর্ডার করুন",
+      "summary_title": "অর্ডারের সারাংশ",
+      "summary_totals_title_accessibility_label": "মোট অর্ডার",
+      "taxes_included": "ট্যাক্স বাবদ {{amount}} সহ",
+      "duties_and_taxes_included": "মোট মূল্যের মধ্যে শুল্ক ও কর অন্তর্ভুক্ত। ডেলিভারিতে কোনো অতিরিক্ত চার্জ নেই।",
+      "duties": "কর্তব্য",
+      "ok_duties_tooltip": "এই অর্ডারটি অন্য একটি দেশ থেকে পাঠানো হচ্ছে, তাই আপনার অর্ডারের মোট মূল্যের সাথে শুল্ক যোগ করা হয়েছে।",
+      "error_duties_tooltip": "এই অর্ডারটি অন্য দেশ থেকে পাঠানো হচ্ছে, তাই ডেলিভারির সময় শুল্ক ও কর ধার্য করা হতে পারে।",
+      "zero_duties_tooltip": "এই অর্ডারটি অন্য একটি দেশ থেকে পাঠানো হচ্ছে। এই মূল্যের অর্ডারের জন্য শুল্ক ধার্য করা হয় না।",
+      "title": "অর্ডার করুন {{name}}",
+      "unit_price": "{{price}}/প্রতিটা",
+      "login_to_view_all_order_details": "আপনার অর্ডারের বিবরণ দেখতে সাইন ইন করুন।",
+      "log_in": "সাইন ইন করুন",
+      "logged_in_account_no_permission_to_order": "আপনি {{email}} হিসেবে সাইন ইন করেছেন। এই অ্যাকাউন্টের এই অর্ডার পরিচালনা করার অনুমতি নেই।",
+      "log_in_to_a_different_account": "অন্য অ্যাকাউন্টে সাইন ইন করুন",
+      "fees": {
+        "restocking_fee": "পুনরায় মজুত করার ফি",
+        "return_shipping_fee": "ফেরত পাঠানো"
+      },
+      "link_sent": "লিঙ্ক পাঠানো হয়েছে",
+      "cash_rounding": "নগদ অর্থের সাপেক্ষে মূল্য পরিবর্তন",
+      "adjusted_payment": "সমন্বিত পেমেন্ট",
+      "adjusted_total": "সমন্বিত মোট",
+      "due_on_date": "দেয়ার কথা {{date}}",
+      "due_on_fulfillment": "পরিশোধের পর প্রাপ্য",
+      "due_on_receipt": "প্রাপ্তির পর প্রদেয়"
     },
     "addresses": {
       "back_button": "পিছনে",
       "edit_button": "সম্পাদনা",
       "add_button_text": "যোগ করুন",
       "pagination": {
-        "load_more_accessibility_label": "আরও ঠিকানা দেখান"
-      }
+        "load_more_accessibility_label": "আরও ঠিকানা দেখান",
+        "load_more": "আরো দেখান"
+      },
+      "add_button": "ঠিকানা যোগ করুন",
+      "add_button_accessibility_label": "ঠিকানা যোগ করুন",
+      "add_address_banner": "চেকআউটের সময় ব্যবহার করার জন্য ঠিকানা যোগ করুন",
+      "no_addresses_banner": "কোন ঠিকানা যোগ করা হয়নি",
+      "address_deleted_notification": "ঠিকানা মুছে ফেলা হয়েছে",
+      "cancel_adding_address_accessibility_label": "ঠিকানা যোগ করা বাতিল করুন",
+      "cancel_deletion_button": "বাতিল করুন",
+      "cancel_deletion_button_accessibility_label": "{{address}} বাতিল করুন",
+      "default_address": {
+        "badge_label": "ডিফল্ট",
+        "title": "ডিফল্ট ঠিকানা",
+        "title_accessibility_label": "ডিফল্ট ঠিকানা: {{address}}"
+      },
+      "delete_button": "মুছে দিন",
+      "delete_button_accessibility_label": "ডিলিট করুন {{address}}",
+      "delete_confirmation_button": "ঠিকানা মুছে ফেলুন",
+      "delete_confirmation_button_accessibility_label": "ডিলিট করুন {{address}}",
+      "delete_confirmation_message": "ঠিকানা মুছে ফেলবেন? বর্তমান অর্ডারগুলিতে কোনো প্রভাব পড়বে না।",
+      "delete_confirmation_title": "ঠিকানা মুছে ফেলবেন?",
+      "delete_confirmation_description": "বিদ্যমান আদেশগুলি প্রভাবিত হয় না।",
+      "edit_button_accessibility_label": "সম্পাদনা করুন {{address}}",
+      "edit_section_accessibility_label": "সম্পাদনা করুন {{address}}",
+      "edit_modal_title": {
+        "default": "ঠিকানা পরিবর্তন করুন",
+        "billing": "বিলিং ঠিকানা এডিট করুন",
+        "shipping": "শিপিং ঠিকানা পরিবর্তন করুন"
+      },
+      "loading_accessibility_message": "ঠিকানা লোড হচ্ছে",
+      "loading_addresses_accessibility_message": "ঠিকানা লোড হচ্ছে",
+      "loading_billing_accessibility_message": "বিলিং ঠিকানা লোড করা হচ্ছে",
+      "loading_finished_accessibility_message": "ঠিকানার নতুন পৃষ্ঠা লোড হয়েছে",
+      "loading_shipping_accessibility_message": "শিপিং ঠিকানা লোড হচ্ছে",
+      "save_new_address_accessibility_label": "ঠিকানা সেভ করুন",
+      "title": "ঠিকানা",
+      "billing_address_dropdown_placeholder": "বিলিং ঠিকানা"
     },
     "address_form": {
-      "save": "সংরক্ষণ করুন"
+      "save": "সংরক্ষণ করুন",
+      "attention": "দৃষ্টি আকর্ষণ",
+      "attention_company": "কোম্পানি/দৃষ্টি আকর্ষণ",
+      "attention_help_text": "ব্যক্তি বা বিভাগের নাম",
+      "auto_complete_close_accessibility_label": "পরামর্শ বন্ধ করুন",
+      "auto_complete_title": "পরামর্শ",
+      "billing_address": "বিলিং ঠিকানা হিসাবে ব্যবহার করুন",
+      "cancel": "বাতিল করুন",
+      "cancel_accessibility_label": "ঠিকানা সম্পাদনা বাতিল করুন {{address}}",
+      "creation_success_notification": "ঠিকানা যোগ করা হয়েছে",
+      "default_address": "এটা আমার ডিফল্ট ঠিকানা",
+      "default_address_creation_success_notification": "ডিফল্ট ঠিকানা যোগ করা হয়েছে",
+      "default_address_update_success_notification": "ডিফল্ট ঠিকানা আপডেট করা হয়েছে",
+      "loading_add_form_accessibility_message": "নতুন ঠিকানা ফর্ম লোড হচ্ছে",
+      "loading_edit_form_accessibility_message": "ঠিকানা পরিবর্তনের ফর্ম লোড করা হচ্ছে",
+      "loading_form_accessibility_message": "ঠিকানার ফর্ম লোড করা হচ্ছে",
+      "loading_finished_accessibility_message": "ঠিকানার ফর্ম লোড করা হয়েছে"
     },
     "B2B": {
       "locations": {
