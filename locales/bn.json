@@ -790,7 +790,8 @@
         "vipps_label": "ভিপ্পস",
         "clear": "পরিষ্কার",
         "order_edit_banner_items_added": {
-          "one": "যোগ করা হয়েছে"
+          "one": "যোগ করা হয়েছে",
+          "other": "যোগ করা হয়েছে %{count}টি"
         },
         "order_edit_banner_single_item_added": "যোগ করা হয়েছে",
         "credit_card_vaulting_sign_in_banner_button_label": "লগ ইন করুন",
@@ -815,14 +816,19 @@
         },
         "saved_credit_cards_modal": {
           "cancel": "বাতিল করুন",
-          "done": "সম্পন্ন"
+          "done": "সম্পন্ন",
+          "view_all_label": "সংরক্ষিত সব কার্ড দেখুন"
         },
         "add_credit_card_modal": {
           "cancel": "বাতিল করুন",
-          "save": "সংরক্ষণ করুন"
+          "save": "সংরক্ষণ করুন",
+          "title": "কার্ড যোগ করুন"
         },
         "delete_credit_card_modal": {
-          "cancel": "বাতিল করুন"
+          "cancel": "বাতিল করুন",
+          "title": "কার্ড মুছুন",
+          "confirmation": "আপনি কি {{lastDigits}}-এ শেষ হওয়া {{brandName}} মুছতে চান?",
+          "delete": "মুছে দিন"
         },
         "usdc_cashback_additional_info": "বেসে USDC দিয়ে পেমেন্ট করুন এবং 30 দিনের মধ্যে আপনার ওয়ালেটে %{incentive_percentage}% ফেরত পান।",
         "usdc_cashback_terms": "শর্তাবলী এবং সীমা প্রযোজ্য",
@@ -847,10 +853,23 @@
         "bank_picker_label": "ব্যাংক",
         "usdc_label": "ইউএসডিসি",
         "preview_not_available": {
-          "button": "ঠিক আছে"
+          "button": "ঠিক আছে",
+          "title": "পূর্বরূপ দেখা যাচ্ছে না",
+          "content": "চিন্তা করবেন না, এই এক্সপ্রেস চেকআউট আপনার গ্রাহকদের জন্য কাজ করবে।"
         },
         "edit_credit_card_modal": {
-          "done": "সম্পন্ন"
+          "done": "সম্পন্ন",
+          "title": "কার্ড এডিট করুন",
+          "cancel": "বাতিল করুন",
+          "description": "আপনি আপনার কার্ডের কেবল বিলিং ঠিকানা পরিবর্তন করতে পারবেন।",
+          "fields": {
+            "default": "ডিফল্ট হিসেবে সেট করুন",
+            "card_number": "কার্ড নম্বর",
+            "expiry": "মেয়াদ শেষ হওয়ার তারিখ",
+            "security_code": "সুরক্ষা কোড",
+            "name": "কার্ডে নাম",
+            "billing": "বিল করতে"
+          }
         },
         "order_edit_banner_no_taxes_label": "কোনটিই নয়",
         "discount_codes_removed_summary": {
@@ -1002,7 +1021,112 @@
         "no_working_method_error": "এই দোকানে এখন পেমেন্ট নেওয়া যাচ্ছে না। অনুগ্রহ করে এই পৃষ্ঠাটি রিফ্রেশ করুন অথবা পরে আবার আসুন।",
         "shipping_rate_updated": "উপলব্ধ শিপিং পদ্ধতি আপডেট করা হয়েছে। চেক আউট করার আগে আপনার পছন্দ নিশ্চিত করুন।",
         "billing_address_invalid_phone": "{{label}} {{last_digits}}-এর জন্য আপনার বিলিং ঠিকানায় ফোন নম্বর আপডেট করুন, এরপর চালিয়ে যান।",
-        "billing_address_invalid_phone_no_card": "চালিয়ে যেতে আপনার বিলিং ঠিকানায় ফোন নম্বর আপডেট করুন।"
+        "billing_address_invalid_phone_no_card": "চালিয়ে যেতে আপনার বিলিং ঠিকানায় ফোন নম্বর আপডেট করুন।",
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "একটি বৈধ ইস্যু তারিখ লিখুন",
+              "issue_number": "একটি বৈধ ইস্যু নম্বর লিখুন"
+            },
+            "invalid": {
+              "verification_value": "একটি বৈধ CVV বা নিরাপত্তা কোড লিখুন"
+            }
+          }
+        },
+        "simulated_checkout": "পূর্বরূপ শীঘ্রই আসছে",
+        "simulated_express_checkout": "আপনার অঞ্চল বা ব্রাউজারের কারণে এডিটর প্রিভিউতে ওয়ালেটগুলি অনুপলব্ধ।",
+        "vaulting_agreement_label": "দ্রুত চেকআউটের জন্য %{company}-এর কাছে আমার পেমেন্টের তথ্য সংরক্ষণ করুন।",
+        "business_customer_vaulting_payment_label": "চেকআউটে এই পেমেন্ট পদ্ধতিটি সেভ করুন এবং এই লোকেশনের জন্য ভবিষ্যতের কেনাকাটার ক্ষেত্রে %{company} কে চার্জ করার অনুমতি দিন। এই লোকেশনে বরাদ্দ করা সকল কন্টাক্ট পেমেন্ট পদ্ধতিটি ব্যবহার করতে পারবেন।",
+        "business_customer_with_bank_account_vaulting_payment_label": "চেকআউটের সময় এই পেমেন্ট পদ্ধতিটি সেভ করুন এবং আপনি এই লোকেশনের জন্য যে ভবিষ্যতের কেনাকাটাগুলি অনুমোদন করেন সেগুলির জন্য আপনার অ্যাকাউন্ট থেকে ডেবিট করার জন্য %{company}-কে অনুমতি দিন, যতক্ষণ না আপনি বাতিল করছেন। এই লোকেশনে বরাদ্দ করা সমস্ত পরিচিতি পেমেন্ট পদ্ধতি ব্যবহার করতে পারবে।",
+        "purchase_options_and_vaulting_agreement_label": "আপনার কার্টের এক বা একাধিক আইটেম একটি স্থগিত বা সাবস্ক্রিপশন কেনাকাটা। আপনার পেমেন্ট চালিয়ে যাওয়ার মাধ্যমে, আপনি সম্মত হন যে আপনার পেমেন্ট পদ্ধতিটি এই পৃষ্ঠায় তালিকাভুক্ত মূল্য এবং ফ্রিকোয়েন্সিতে স্বয়ংক্রিয়ভাবে চার্জ করা হবে যতক্ষণ না এটি শেষ হয় বা আপনি বাতিল করেন। সমস্ত বাতিলকরণ %{cancellation_policy_label}-এর অধীন।",
+        "purchase_options_cancellation_policy_label": "বাতিলকরণ নীতি",
+        "use_different_credit_card_label": "অন্য একটি কার্ড ব্যবহার করুন",
+        "saved_credit_card": "আপনার সেভ করা ক্রেডিট কার্ড",
+        "saved_credit_card_info": "শেষের চার সংখ্যা",
+        "saved_credit_card_cvv_verification": "যাচাইকরণের উদ্দেশ্যে, আপনার কার্ডের নিরাপত্তা কোড লিখুন।",
+        "expired_cards_info": {
+          "one": "আপনার অ্যাকাউন্টে %{count}টি মেয়াদোত্তীর্ণ কার্ড আছে, যা আপনি দেখতে এবং এডিট করতে পারবেন।",
+          "other": "আপনার অ্যাকাউন্টে %{count}টি মেয়াদ উত্তীর্ণ কার্ড আছে, যা আপনি দেখতে ও এডিট করতে পারবেন।"
+        },
+        "local_payment_method_receiver_notice": "অর্ডার দেওয়ার পরে, আপনি অর্থপ্রদানের বিবরণ পাবেন। {{dueDays}} দিনের মধ্যে একটি এটিএম বা অনলাইনের মাধ্যমে অর্থপ্রদান করুন।",
+        "order_edit_banner_title": "{{amount_owed}} পরিশোধ করা প্রয়োজন",
+        "order_edit_banner_subtitle": "আপনার অর্ডার {{order_number}} আপডেট করা হয়েছে। এই পরিবর্তনগুলি পর্যালোচনা করুন, তারপর আপনার অর্ডার নিশ্চিত করতে পেমেন্ট করুন।",
+        "order_edit_banner_items_removed": {
+          "in_full": "অপসারণ করা হয়েছে",
+          "with_quantities": "{{quantity}} থেকে {{delta}} সরানো হয়েছে"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "ফেরত দেওয়া হয়েছে {{quantity}}",
+          "with_quantities": "{{quantity}} এর মধ্যে {{delta}} ফেরত দেওয়া হয়েছে"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "ফেরত থেকে বাদ দেওয়া হয়েছে",
+          "with_quantities": "{{delta}} ফেরত থেকে সরানো হয়েছে"
+        },
+        "order_edit_banner_multiple_items_added": "যোগ করা হয়েছে {{amount}}",
+        "order_edit_banner_single_item_removed": "অপসারণ করা হয়েছে",
+        "order_edit_banner_multiple_items_removed": "বাদ দেওয়া হয়েছে {{amount}}",
+        "order_edit_banner_single_item_returned": "ফেরত এসেছে",
+        "order_edit_banner_multiple_items_returned": "ফেরত দেওয়া হয়েছে {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "ফেরত থেকে বাদ দেওয়া হয়েছে",
+        "order_edit_banner_multiple_items_return_line_item_removed": "রিটার্ন থেকে {{amount}} সরানো হয়েছে",
+        "order_edit_banner_updated_order_label": "অর্ডার আপডেট করা হয়েছে",
+        "gift_card_wrapper": {
+          "heading": "উপহার কার্ড",
+          "apply_gift_card_label": "একটি উপহার কার্ড ব্যবহার করুন",
+          "apply_another_gift_card_label": "আরেকটি উপহার কার্ড ব্যবহার করুন",
+          "gift_card_label": "গিফট কার্ড %{identifier}",
+          "payment_tag": "উপহার কার্ড",
+          "add_label": "একটি গিফট কার্ড যোগ করুন",
+          "manage_label": "গিফট কার্ড পরিচালনা করুন"
+        },
+        "gift_card_store_credit": {
+          "add_label": "একটি উপহার কার্ড বা স্টোর ক্রেডিট যোগ করুন",
+          "manage_label": "গিফট কার্ড বা স্টোর ক্রেডিট পরিচালনা করুন"
+        },
+        "gift_card_checkbox_label": "উপহার কার্ড ব্যবহার করুন",
+        "custom_onsite_payment_method_modal": {
+          "title": "কাস্টম অনসাইট পেমেন্ট নিশ্চিতকরণ"
+        },
+        "markets_pro_disclaimer_terms_and_conditions": "শর্তাবলী",
+        "markets_pro_disclaimer_privacy_policy": "গোপনীয়তা নীতি",
+        "markets_pro_disclaimer_terms_and_conditions_title": "রেকর্ড মার্চেন্টের শর্তাবলী",
+        "markets_pro_disclaimer_privacy_policy_title": "মার্চেন্ট অফ রেকর্ড গোপনীয়তা নীতি",
+        "purchase_order_number": {
+          "title": "পিও নম্বর",
+          "label": "পিও নম্বর (ঐচ্ছিক)"
+        },
+        "alternative_payment_currency_total_notice": "দ্রষ্টব্য: আপনার থেকে %{amount_due} চার্জ করা হবে।",
+        "alternative_payment_currency_total_manual_payment_notice": "দ্রষ্টব্য: মোট রূপান্তরিত পরিমাণ হলো %{amount_due}।",
+        "waiting_on_taxes_message": "আপনার করগুলি যদি পরবর্তী কয়েক সেকেন্ডের মধ্যে গণনা না হয়, তাহলে পৃষ্ঠাটি রিফ্রেশ করুন।",
+        "waiting_on_taxes_notice": "ট্যাক্স গণনা করা হচ্ছে",
+        "payment_method": "পেমেন্ট পদ্ধতি",
+        "payment_method_rollup_accessibility_label": "পেমেন্ট পদ্ধতির বিকল্পগুলি",
+        "expired_payment_method": "নির্বাচিত অর্থপ্রদানের পদ্ধতিটির মেয়াদ শেষ হয়ে গেছে",
+        "payment_method_update_failed": "পেমেন্ট পদ্ধতি আপডেট করা যায়নি।",
+        "payment_method_incompatible_with_payment_terms": "পেমেন্টের পদ্ধতি পেমেন্টের শর্তাবলীর সাথে অসঙ্গতিপূর্ণ।",
+        "proposed_gateway_unavailable": "প্রস্তাবিত পেমেন্ট গেটওয়েটি অনুপলব্ধ",
+        "pay_in_installments_split_pay_short": "%{amount} এর ৪টি পেমেন্ট",
+        "gift_cards_unavailable": "আপনার উপহার কার্ড এই অর্ডারে আর প্রয়োগ করা যাবে না এবং সেটি সরিয়ে ফেলা হয়েছে",
+        "payment_flexibility_terms_id_mismatch": "পেমেন্ট ফ্লেক্সিবিলিটি শর্তাবলীর আইডি অমিল",
+        "payment_option": {
+          "accessibility_label": "একটি অর্থপ্রদানের বিকল্প বেছে নিন"
+        },
+        "bank_account_type": {
+          "checking": "পর্যবেক্ষণ করা হচ্ছে",
+          "savings": "সঞ্চয়"
+        },
+        "new_bank_account_disclaimer": "আপনার অর্ডারটি সম্পন্ন করার মাধ্যমে, আপনি %{shop_name}-কে নিচের অ্যাকাউন্ট থেকে প্রদর্শিত পরিমাণ এবং সময় অনুযায়ী ACH এর মাধ্যমে ডেবিট করার অনুমতি দিচ্ছেন।",
+        "bank_account_disclaimer": "এসিএইচ পেমেন্ট প্রক্রিয়া করতে ৪ কার্যদিবস পর্যন্ত সময় লাগতে পারে।",
+        "bank_account_choose": "আপনার কেনাকাটা নিরাপদে সম্পন্ন করতে একটি অ্যাকাউন্ট বেছে নিন",
+        "bank_account_connect_another": "অন্য একটি ব্যাংক অ্যাকাউন্ট সংযুক্ত করুন",
+        "bank_account_connect": "ব্যাংক অ্যাকাউন্ট সংযুক্ত করুন",
+        "bank_account_missing": "ব্যাংক অ্যাকাউন্ট সংযুক্ত করতে হবে",
+        "bank_account_generic_error": "ব্যাংক অ্যাকাউন্ট যোগ করা যায়নি। পরে আবার চেষ্টা করুন।",
+        "separate_payments_label": "আপনার জিনিসপত্র একাধিক দোকানের। আপনাকে %{separate_payments_link} চার্জ করা হবে।",
+        "separate_payments_text": "আলাদা পেমেন্ট",
+        "payments": "পেমেন্টস",
+        "add_payment_method": "পেমেন্ট পদ্ধতি যোগ করুন"
       },
       "post_purchase": {
         "components": {
@@ -1398,7 +1522,13 @@
         "edit": "সম্পাদনা",
         "address_form": {
           "save": "সংরক্ষণ করুন"
-        }
+        },
+        "billing_address_title": "বিল করতে",
+        "billing_address_rollup_accessibility_label": "বিল করার বিকল্পগুলি",
+        "same_as_shipping": "শিপিং ঠিকানা হিসাবে একই",
+        "add_address": "অন্য ঠিকানা ব্যবহার করুন",
+        "delete": "মুছে দিন",
+        "address_more": "এই ঠিকানার জন্য আরও পদক্ষেপ"
       },
       "payment_summary": {
         "free_label": "বিনামূল্যে"
