@@ -2857,7 +2857,9 @@
       },
       "people": {
         "pagination": {
-          "load_more_accessibility_label": "আরও লোক দেখান"
+          "load_more_accessibility_label": "আরও লোক দেখান",
+          "load_more": "আরো দেখান",
+          "loading_accessibility_label": "মানুষ লোড করা হচ্ছে"
         }
       },
       "loading_accessibility_message": "অ্যাকাউন্ট লোড হচ্ছে",
@@ -2867,35 +2869,76 @@
         "description": "ইমেল সফলভাবে আপডেট করা হয়েছে। লগইনে পুনঃনির্দেশিত করা হচ্ছে।"
       },
       "profile_update_confirmation_message": "প্রোফাইল আপডেট করা হয়েছে",
-      "email_update_confirmation_message": "ইমেল আপডেট করা হয়েছে {{email}}-এ"
+      "email_update_confirmation_message": "ইমেল আপডেট করা হয়েছে {{email}}-এ",
+      "title": "প্রোফাইল"
     },
     "orders": {
       "order_list": {
         "carousel": {
-          "next": "পরবর্তী"
+          "next": "পরবর্তী",
+          "one_products_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "অর্ডারে আছে: {{lineItemName1}}, পরিমাণ: {{lineItemQuantity1}}, {{lineItemName2}}, পরিমাণ: {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "অর্ডারে আছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}, {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}, {{lineItemName3}} পরিমাণ {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}, {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}, {{lineItemName3}} পরিমাণ {{lineItemQuantity3}}, {{lineItemName4}} পরিমাণ {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "অর্ডারে আছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}, {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}, {{lineItemName3}} পরিমাণ {{lineItemQuantity3}}, {{lineItemName4}} পরিমাণ {{lineItemQuantity4}}, {{lineItemName5}} পরিমাণ {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "অর্ডারের অন্তর্ভুক্ত {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}, {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}, {{lineItemName3}} পরিমাণ {{lineItemQuantity3}}, {{lineItemName4}} পরিমাণ {{lineItemQuantity4}}, {{lineItemName5}} পরিমাণ {{lineItemQuantity5}}, {{lineItemName6}} পরিমাণ {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "অর্ডারের মধ্যে রয়েছে {{lineItemName1}} পরিমাণ {{lineItemQuantity1}}, {{lineItemName2}} পরিমাণ {{lineItemQuantity2}}, {{lineItemName3}} পরিমাণ {{lineItemQuantity3}}, {{lineItemName4}} পরিমাণ {{lineItemQuantity4}}, {{lineItemName5}} পরিমাণ {{lineItemQuantity5}}, {{lineItemName6}} পরিমাণ {{lineItemQuantity6}} এবং আরও অনেক কিছু",
+          "view_order_details": "অর্ডারের বিবরণ দেখুন",
+          "previous": "পূর্ববর্তী"
         },
         "pagination": {
           "next": "পরবর্তী",
           "previous": "পূর্ববর্তী",
-          "load_more_accessibility_label": "আরো অর্ডার দেখান"
+          "load_more_accessibility_label": "আরো অর্ডার দেখান",
+          "nav_accessibility_label": "অর্ডার নেভিগেশন বোতাম",
+          "next_accessibility_label": "পরবর্তী আদেশ",
+          "previous_accessibility_label": "আগের অর্ডারগুলি",
+          "load_more": "আরো দেখান"
         },
         "payment_status": {
           "list_view": {
             "paid": "পরিশোধিত",
-            "due_without_date": "বকেয়া"
+            "due_without_date": "বকেয়া",
+            "overdue": "বিলম্বিত",
+            "due": "দেয়ার কথা {{date}}",
+            "due_today": "আজকের মধ্যে জমা দিন",
+            "due_on_fulfillment": "পরিশোধের পর প্রাপ্য",
+            "pay_to_confirm": "নিশ্চিত করতে অর্থপ্রদান করুন",
+            "payment_not_due": "এখনও নির্ধারিত হয়নি"
+          },
+          "gallery_view": {
+            "overdue": "পেমেন্ট বকেয়া আছে",
+            "due": "পেমেন্টের শেষ তারিখ {{date}}",
+            "due_today": "আজ পেমেন্ট বাকি",
+            "due_without_date": "পেমেন্ট বাকি",
+            "due_on_fulfillment": "পরিশোধ পূরণের পর প্রদেয়",
+            "pay_to_confirm": "নিশ্চিত করতে অর্থপ্রদান করুন",
+            "payment_not_due": "পেমেন্টের সময় এখনও হয়নি"
           }
         },
         "sort_title": "সাজান",
         "column_headers": {
           "order": "অর্ডার",
-          "total": "মোট"
+          "total": "মোট",
+          "actions_accessibility_label": "কার্যক্রম",
+          "products_accessibility_label": "পণ্যসমূহ"
         },
         "filter": {
           "apply": "প্রয়োগ করুন",
           "date": {
-            "today": "আজ"
+            "today": "আজ",
+            "start_date": "শুরুর তারিখ",
+            "end_date": "শেষের তারিখ",
+            "title": "অর্ডারের তারিখ",
+            "last_7_days": "গত ৭ দিন",
+            "last_30_days": "গত ৩০ দিন",
+            "last_90_days": "গত ৯০ দিন",
+            "last_365_days": "গত ১২ মাস",
+            "custom": "কাস্টম"
           },
-          "date_section_accessibility_label": "{{sectionTitle}} দ্বারা ফিল্টার করুন"
+          "date_section_accessibility_label": "{{sectionTitle}} দ্বারা ফিল্টার করুন",
+          "clear_section": "অংশটি পরিষ্কার করুন",
+          "clear_all": "সব মুছে ফেলো"
         },
         "empty_state_redesign_welcome_with_name": "স্বাগতম, {{firstName}}",
         "sort_options_accessibility_label": "নিশ্চিত অর্ডারের জন্য বাছাই করার বিকল্পগুলি",
@@ -2903,7 +2946,69 @@
         "view_order_accessibility_label": "অর্ডার দেখুন {{orderName}}",
         "empty_state_redesign_cta": "এখনই কিনুন",
         "empty_state_redesign_subtitle": "কেনাকাটার জন্য প্রস্তুত?",
-        "empty_state_redesign_welcome": "স্বাগতম"
+        "empty_state_redesign_welcome": "স্বাগতম",
+        "delivered": "ডেলিভার করা হয়েছে {{date}}",
+        "empty_state_order_source_description": "শুধুমাত্র {{email}} দ্বারা দেওয়া অর্ডারগুলি এখানে দেখানো হবে।",
+        "empty_state_subtitle": "অর্ডার করার জন্য দোকানে যান।",
+        "empty_state_title": "এখনো কোন অর্ডার নেই",
+        "empty_state_with_location_title": "{{locationName}} এর জন্য কোনো অর্ডার নেই",
+        "empty_state_title_for_pending_orders": "কোনো মুলতবি আদেশ নেই",
+        "no_order_banner": "অর্ডার স্ট্যাটাস পেজে আপনার এক্সটেনশন পরীক্ষা করার জন্য, একটি অর্ডার তৈরি করুন।",
+        "estimated_shortform": "প্রতিষ্ঠিত। {{date}}",
+        "estimated_delivery": "আনুমানিক {{date}}",
+        "two_images_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "অর্ডারে রয়েছে {{lineItemName1}}, {{lineItemName2}} এবং আরও {{numberOfAdditionalProducts}}টি পণ্য",
+        "more_than_four_products_accessibility_label": "অর্ডারে আছে {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, এবং আরও {{numberOfAdditionalProducts}}টি প্রোডাক্ট",
+        "plus_more_products": "+{{numberOfAdditionalProducts}}টি পণ্য",
+        "items": {
+          "one": "{{count}}টি আইটেম",
+          "other": "{{count}}টি আইটেম"
+        },
+        "no_filtered_results_description": "আপনার অর্ডারগুলি দেখতে ফিল্টারগুলি সরান অথবা পরিবর্তন করুন",
+        "no_filtered_results_title": "কোনো ফিল্টার করা ফলাফল নেই",
+        "order_link": "অর্ডার দেখুন {{name}}",
+        "order_number": "অর্ডার করুন {{name}}",
+        "orders_title": "নিশ্চিত করা হয়েছে",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "বিশদ বিবরণের জন্য অর্ডার দেখুন",
+            "estimated_delivery": "আনুমানিক {{date}}",
+            "last_updated": "সর্বশেষ আপডেট করা হয়েছে {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "আনুমানিক বিতরণ {{date}}"
+          }
+        },
+        "sort_hide_options_accessibility_label": "নিশ্চিত অর্ডারগুলোর জন্য সাজানোর বিকল্পগুলি লুকান।",
+        "sort_show_options_accessibility_label": "নিশ্চিত অর্ডারগুলির জন্য সাজানোর বিকল্পগুলি দেখান।",
+        "sort_currently_sorted_by_accessibility_label": "বর্তমানে এর মাধ্যমে সাজানো হয়েছে: {{option}}",
+        "sort": {
+          "date": {
+            "newest": "নতুন থেকে পুরনো",
+            "oldest": "পুরনো থেকে নতুন"
+          },
+          "location": {
+            "ascending": "অবস্থান (এ-জেড)",
+            "descending": "অবস্থান (Z-A)"
+          },
+          "order_number": {
+            "ascending": "অর্ডার নম্বর (কম থেকে বেশি)",
+            "descending": "অর্ডার নম্বর (বেশি থেকে কম)"
+          },
+          "order_total": {
+            "ascending": "অর্ডারের মোট মূল্য (কম থেকে বেশি)",
+            "descending": "অর্ডারের মোট মূল্য (বেশি থেকে কম)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "সব লোকেশন",
+          "current_location": "বর্তমান অবস্থান",
+          "switch_view": "ভিউ পরিবর্তন করুন"
+        },
+        "filter_title": "ফিল্টার করুন",
+        "show_order_actions_accessibility_label": "অর্ডার {{name}}-এর জন্য অর্ডার অ্যাকশনগুলো দেখান"
       },
       "order_status": {
         "confirmed_description_pickup": "আমরা ডেলিভারির জন্য এই জিনিসগুলি প্রস্তুত করছি।",
@@ -2930,13 +3035,27 @@
         "delivery_exception_returning_to_sender_description_unknown": "আরও তথ্যের জন্য বাহকের সাথে যোগাযোগ করুন",
         "delivery_exception_shop_promise_delivered_late_description": "আপনার অর্ডার শপ প্রমিস দ্বারা সুরক্ষিত। যেহেতু এটি দেরিতে পৌঁছেছে, তাই শপ ক্যাশ বাবদ {{amount}} দাবি করুন।",
         "delivery_exception_shop_promise_delivered_late_title": "দেরিতে বিতরণ করা হয়েছে",
-        "predicted_by_shop": "শপের মাধ্যমে ভবিষ্যদ্বাণী করা হয়েছে"
+        "predicted_by_shop": "শপের মাধ্যমে ভবিষ্যদ্বাণী করা হয়েছে",
+        "attempted_delivery_label": "বিতরণের চেষ্টা করা হয়েছে",
+        "attempted_to_deliver_label": "ডেলিভারি করার চেষ্টা হয়েছিল",
+        "preparing_for_shipping_label": "শিপিংয়ের জন্য প্রস্তুত করা হচ্ছে",
+        "ready_for_pickup_label": "পিকআপের জন্য প্রস্তুত",
+        "ready_for_pickup_description": "এই জিনিসগুলো সংগ্রহের জন্য প্রস্তুত। আপনার অর্ডার সংগ্রহ করার সময় দয়া করে আপনার অর্ডার নিশ্চিতকরণ সাথে আনবেন।",
+        "ready_for_pickup_location": "আপনার অর্ডার পিকআপের জন্য প্রস্তুত",
+        "picked_up_label": "পিক আপ করা হয়েছে"
       },
       "buy_again_accessibility_label": "অর্ডার {{orderId}} আবার কিনুন",
       "manage": "পরিচালনা করুন",
       "manage_accessiblity_label": "অর্ডার পরিচালনা করুন {{orderId}}",
       "group_title_label": "এর অংশ: {{groupTitle}}",
-      "group_title_label_with_parent": "জন্য: {{groupTitle}}"
+      "group_title_label_with_parent": "জন্য: {{groupTitle}}",
+      "list_layout_accessibility_label": "বিন্যাস বিকল্পগুলি",
+      "list_title": "আদেশসমূহ",
+      "list_title_with_pending_orders": "আদেশ:",
+      "list_title_confirmed_orders_accessibility_label": "অর্ডার: নিশ্চিত",
+      "list_title_pending_orders_accessibility_label": "অর্ডার: অপেক্ষমাণ",
+      "switch_order_type_pending_orders_accessibility_label": "অর্ডার টাইপ পরিবর্তন করুন, বর্তমানে মুলতবি অর্ডারগুলো দেখা হচ্ছে",
+      "switch_order_type_confirmed_orders_accessibility_label": "অর্ডার টাইপ পরিবর্তন করুন, বর্তমানে নিশ্চিত অর্ডারগুলো দেখা হচ্ছে"
     },
     "order_details": {
       "view_controls": {
