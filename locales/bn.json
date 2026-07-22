@@ -2170,7 +2170,45 @@
       "or": "অথবা",
       "add_payment_method": {
         "button_title": "যোগ করুন",
-        "missing_customer_error": "কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন অথবা সহায়তার জন্য যোগাযোগ করুন।"
+        "missing_customer_error": "কিছু ভুল হয়েছে। অনুগ্রহ করে আবার চেষ্টা করুন অথবা সহায়তার জন্য যোগাযোগ করুন।",
+        "title": "পেমেন্ট পদ্ধতি যোগ করুন",
+        "payment_method_added_confirmation": "পেমেন্ট পদ্ধতি যোগ করা হয়েছে",
+        "replace_mode_warning": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে আপনার সাবস্ক্রিপশন বা প্রি-অর্ডারগুলির উপর প্রভাব পড়বে। আসন্ন অর্ডারগুলি পেতে বিকল্প একটি পেমেন্ট পদ্ধতি যোগ করুন।",
+        "choose_from_list": "তালিকা থেকে বেছে নিন",
+        "add_new_button": "নতুন যোগ করুন",
+        "billing_address": {
+          "title": "বিলিং ঠিকানা",
+          "add_billing_address_button": "নতুন যোগ করুন",
+          "add_billing_address_button_accessibility_label": "নতুন বিলিং ঠিকানা যোগ করুন",
+          "choose_billing_address_from_list_button": "তালিকা থেকে বেছে নিন",
+          "choose_billing_address_from_list_button_accessibility_label": "তালিকা থেকে একটি বিলিং ঠিকানা বেছে নিন",
+          "missing_billing_address_error_message": "অনুগ্রহ করে একটি বিলিং ঠিকানা উল্লেখ করুন",
+          "default_checkbox": "ডিফল্ট পেমেন্ট পদ্ধতি হিসেবে সেট করুন"
+        },
+        "subscription_contracts": {
+          "title": "পুনরাবৃত্ত অর্ডারের জন্য পেমেন্ট পদ্ধতি ব্যবহার করুন",
+          "more_items": {
+            "one": "{{count}} আরও পণ্য",
+            "other": "{{count}}টি আরও পণ্য"
+          },
+          "product_count": {
+            "one": "{{count}}টি পণ্য",
+            "other": "{{count}} পণ্য"
+          },
+          "product_details": "পণ্যের বিবরণ",
+          "load_more": "আরো দেখান"
+        },
+        "updating_contracts": {
+          "one": "{{count}} সাবস্ক্রিপশন চুক্তি আপডেট করা হচ্ছে...",
+          "other": "{{count}}টি সাবস্ক্রিপশন চুক্তি আপডেট করা হচ্ছে..."
+        },
+        "contracts_updated": {
+          "one": "সাবস্ক্রিপশন চুক্তি সফলভাবে আপডেট করা হয়েছে {{count}}",
+          "other": "সফলভাবে {{count}} সাবস্ক্রিপশন চুক্তি আপডেট করা হয়েছে"
+        },
+        "contracts_update_failed": "কিছু সাবস্ক্রিপশন চুক্তি আপডেট করা যায়নি",
+        "subscription_contracts_updated": "{{total}} সদস্যতার মধ্যে {{succeeded}}টি আপডেট করা হয়েছে",
+        "invalid_wallet_type_error": "অকার্যকর ওয়ালেট ধরণ।"
       },
       "expiring_badge_label": "মেয়াদ উত্তীর্ণ হচ্ছে",
       "digital_wallet_title": "ডিজিটাল ওয়ালেট",
@@ -2209,7 +2247,8 @@
         "return_home_button": "হোম পেজে ফিরে যান"
       },
       "three_d_secure": {
-        "verification_failed": "আপনার পেমেন্ট যাচাই করা যায়নি। আবার চেষ্টা করুন অথবা অন্য পেমেন্ট পদ্ধতি ব্যবহার করুন।"
+        "verification_failed": "আপনার পেমেন্ট যাচাই করা যায়নি। আবার চেষ্টা করুন অথবা অন্য পেমেন্ট পদ্ধতি ব্যবহার করুন।",
+        "title": "থ্রিডি সিকিওর"
       },
       "credit_or_debit_card_title": "ক্রেডিট বা ডেবিট কার্ড",
       "credit_card_title": "ক্রেডিট কার্ড",
@@ -2243,7 +2282,54 @@
         "card_number_label": "কার্ড নম্বর",
         "card_number_placeholder": "কার্ড নম্বর",
         "name_on_card_label": "কার্ডে নাম",
-        "name_on_card_placeholder": "কার্ডে নাম"
+        "name_on_card_placeholder": "কার্ডে নাম",
+        "card_expiry_label": "মেয়াদ উত্তীর্ণের তারিখ (MM / YY)",
+        "card_expiry_placeholder": "মেয়াদ উত্তীর্ণের তারিখ (MM / YY)",
+        "card_verification_value_label": "সুরক্ষা কোড",
+        "card_verification_value_placeholder": "সুরক্ষা কোড",
+        "card_start_label": "ইস্যুর তারিখ (মাস / বছর)",
+        "card_start_placeholder": "ইস্যুর তারিখ (মাস / বছর)",
+        "tooltip": {
+          "tooltip_accessibility_label": "আরও তথ্য",
+          "card_verification_value_explanation_amex": "আপনার কার্ডের সামনের দিকে থাকা ৪-সংখ্যার সুরক্ষা কোড",
+          "card_verification_value_explanation_other": "আপনার কার্ডের পেছনে থাকা ৩-সংখ্যার নিরাপত্তা কোড",
+          "card_verification_value_explanation": "৩-সংখ্যার সিকিউরিটি কোড সাধারণত আপনার কার্ডের পিছনে থাকে। আমেরিকান এক্সপ্রেস কার্ডের ক্ষেত্রে এটি সামনে থাকা একটি ৪-সংখ্যার কোড।",
+          "card_security_notice": "সমস্ত লেনদেন সুরক্ষিত ও এনক্রিপ্ট করা।"
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "কার্ডে আপনার নাম ঠিক যেমনভাবে লেখা আছে, তেমনই লিখুন",
+          "credit_card_number_invalid": "একটি বৈধ কার্ড নম্বর লিখুন",
+          "credit_card_expiry_invalid": "একটি বৈধ কার্ডের মেয়াদ শেষ হওয়ার তারিখ লিখুন",
+          "credit_card_verification_value_blank": "আপনার কার্ডের CVV বা সিকিউরিটি কোড লিখুন"
+        },
+        "unavailable": {
+          "text": "ক্রেডিট এবং ডেবিট কার্ডের মাধ্যমে পেমেন্ট এখন সম্ভব নয়।",
+          "link_text": "এই পৃষ্ঠাটি রিফ্রেশ করুন",
+          "suffix": "অথবা পরে আবার চেষ্টা করুন।"
+        }
+      },
+      "payment_delete": {
+        "title": "পেমেন্টের পদ্ধতি মুছে ফেলুন",
+        "description_without_replacement": "ভবিষ্যতের কেনাকাটার জন্য এই পেমেন্ট পদ্ধতিটি আর উপলব্ধ থাকবে না।",
+        "description_with_replacement": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে প্রি-অথোরাইজড পেমেন্টগুলিতে প্রভাব পড়বে। আসন্ন অর্ডারগুলি পেতে, আপনি বিকল্পভাবে এটিকে অন্য একটি পেমেন্ট পদ্ধতির সাথে প্রতিস্থাপন করতে পারেন।",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে প্রি-অথরাইজড পেমেন্টগুলিতে প্রভাব পড়বে। আপনি যদি অন্য কোনো পেমেন্ট পদ্ধতি বেছে না নেন, তাহলে বিদ্যমান অর্ডারে বাকি থাকা বকেয়াগুলির জন্য এই পেমেন্ট পদ্ধতি থেকেই চার্জ করা হবে। অন্য একটি পেমেন্ট পদ্ধতি বেছে নিলে আপনি আপনার আসন্ন সাবস্ক্রিপশন অর্ডারগুলি নিরবচ্ছিন্নভাবে পাবেন।",
+          "with_pending_orders": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে আপনার অ্যাকাউন্ট থেকে এটি সরিয়ে দেওয়া হবে এবং ভবিষ্যতের কেনাকাটার জন্য আর উপলব্ধ থাকবে না। যদি আপনি একটি বিকল্প পেমেন্ট পদ্ধতি নির্বাচন না করেন, তাহলে এটি বিদ্যমান অর্ডারগুলির কোনো বকেয়া বকেয়ার জন্য চার্জ করা হবে।",
+          "with_subscriptions": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে প্রি-অথরাইজড পেমেন্টগুলিতে প্রভাব পড়বে। আসন্ন অর্ডারগুলি পেতে বিকল্প পেমেন্ট পদ্ধতি যোগ করুন।"
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে প্রি-অথরাইজড পেমেন্টগুলিতে প্রভাব পড়বে। বর্তমান অর্ডারগুলির যেকোনো বকেয়া অর্থের জন্য এই পেমেন্ট পদ্ধতিটি থেকে চার্জ কাটা হবে, কিন্তু আপনি এরপর থেকে সাবস্ক্রিপশনের অর্ডারগুলি পাবেন না। সাবস্ক্রিপশনের অর্ডারগুলি পেতে অন্য একটি পেমেন্ট পদ্ধতি যোগ করুন।",
+          "with_pending_orders": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে তা আপনার অ্যাকাউন্ট থেকে সরিয়ে দেওয়া হবে এবং ভবিষ্যতে আর কেনাকাটার জন্য উপলব্ধ থাকবে না। তবে, বর্তমানে অর্ডার করা জিনিসগুলির বকেয়া পেমেন্টের জন্য এটি ব্যবহার করা যাবে।",
+          "with_subscriptions": "এই পেমেন্ট পদ্ধতিটি মুছে ফেললে প্রি-অথরাইজড পেমেন্টগুলিতে প্রভাব পড়বে। আসন্ন অর্ডারগুলি পেতে বিকল্প একটি পেমেন্ট পদ্ধতি যোগ করুন।"
+        },
+        "payment_method_selector_placeholder": "একটি বিকল্প পেমেন্ট পদ্ধতি বেছে নিন (ঐচ্ছিক)",
+        "payment_method_selector_no_alternative_payment": "কোনো প্রতিস্থাপন পদ্ধতি নেই",
+        "replace_method_with_new_method_description": "আপনার {{currentPaymentMethodName}} মুছে ফেলা হবে এবং এর বদলে আপনার {{newPaymentMethodName}} যোগ করা হবে।",
+        "error_when_deleting": "আমরা ক্ষমাপ্রার্থী, কিন্তু কিছু একটা ভুল হয়েছে এবং আমরা এই পেমেন্ট পদ্ধতিটি মুছে ফেলতে পারিনি। অনুগ্রহ করে পরে আবার চেষ্টা করুন অথবা পৃষ্ঠাটি রিফ্রেশ করুন।",
+        "delete_and_replace_button": "মুছে ফেলুন এবং প্রতিস্থাপন করুন",
+        "delete_and_replace_button_accessibility_label": "{{currentPaymentMethodName}} মুছে দিন এবং {{newPaymentMethodName}} দিয়ে প্রতিস্থাপন করুন।",
+        "deleted_successfully": "পেমেন্ট পদ্ধতি সফলভাবে মুছে ফেলা হয়েছে।",
+        "loading_available_payment_methods_accessibility_label": "উপলব্ধ পেমেন্ট পদ্ধতি লোড হচ্ছে"
       }
     },
     "payment_method_brands": {
@@ -2256,7 +2342,28 @@
       "jcb": "জেসিবি",
       "elo": "এলো",
       "blik": "ব্লিক",
-      "usdc": "ক্রিপ্টো: USDC"
+      "usdc": "ক্রিপ্টো: USDC",
+      "mastercard": "মাস্টারকার্ড",
+      "americanexpress": "আমেরিকান এক্সপ্রেস",
+      "discover": "আবিস্কার করুন",
+      "dinersclub": "ডিনার্স ক্লাব",
+      "visaelectron": "ভিসা ইলেক্ট্রন",
+      "maestro": "মায়েস্ত্রো",
+      "forbrugsforeningen": "ফরব্রুগসফোরেনিনজেন",
+      "dankort": "ড্যানকোর্ট",
+      "hipercard": "হাইপারকার্ড",
+      "unionpay": "ইউনিয়নপে",
+      "shoppay": "শপ পে",
+      "applepay": "অ্যাপল পে",
+      "googlepay": "গুগল পে",
+      "paypal": "পেপ্যাল",
+      "storecredit": "স্টোর ক্রেডিট",
+      "klarna_pay_now": "ক্লারনা",
+      "klarna_pay_later": "ক্লারনা",
+      "klarna_slice_it": "ক্লারনা",
+      "klarna": "ক্লারনা",
+      "mobilepay": "মোবাইলপে",
+      "przelewy24": "প্রজেলেয়ি২৪"
     },
     "ui_components": {
       "june": "জুন",
@@ -2276,7 +2383,23 @@
       "thursdayAbbreviation": "ম",
       "fridayAbbreviation": "ফরাসী ভাষায়",
       "saturdayAbbreviation": "শনি",
-      "sundayAbbreviation": "রবি"
+      "sundayAbbreviation": "রবি",
+      "clipboardCopied": "কপি করা হয়েছে",
+      "clipboardFailedToCopy": "কপি করা যায়নি",
+      "expandNotification": "আরও দেখুন",
+      "submit": "জমা দিন",
+      "processing": "প্রক্রিয়াকরণ চলছে...",
+      "increase": "{{type}} বৃদ্ধি করুন",
+      "decrease": "{{type}} হ্রাস করুন",
+      "minimumReached": "সর্বনিম্ন {{value}} পূরণ হয়েছে",
+      "maximumReached": "সর্বোচ্চ {{value}}-তে পৌঁছেছে",
+      "january": "জানুয়ারি",
+      "february": "ফেব্রুয়ারি",
+      "august": "আগস্ট",
+      "september": "সেপ্টেম্বর",
+      "october": "অক্টোবর",
+      "november": "নভেম্বর",
+      "december": "ডিসেম্বর"
     },
     "profile_preview_bar": {
       "edit": "সম্পাদনা",
@@ -2384,6 +2507,9 @@
       "expand_label": "ঘোষণা বার প্রসারিত করুন",
       "collapse_label": "ঘোষণা বার সঙ্কুচিত করুন",
       "close_label": "ঘোষণাপট বন্ধ করুন"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "কুকি পছন্দসমূহ"
     }
   },
   "accessibility": {
