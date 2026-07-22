@@ -696,8 +696,12 @@
         "apply_gift_card_button_label": "প্রয়োগ করুন",
         "crypto_modal": {
           "error": {
-            "close": "বন্ধ"
-          }
+            "close": "বন্ধ",
+            "refresh": "রিফ্রেশ করুন",
+            "sandbox_error": "কিছু একটা ভুল হয়েছে",
+            "web_component_error": "এই পৃষ্ঠাটি লোড করতে সমস্যা হয়েছে"
+          },
+          "header": "%{shop_name}-কে %{total_price} USDC দিন"
         },
         "twint_label": "টুইন্ট",
         "swish_label": "সুইশ",
@@ -715,8 +719,13 @@
         "pending_payment": {
           "multibanco": {
             "entity": "সত্তা",
-            "amount": "পরিমাণ"
-          }
+            "amount": "পরিমাণ",
+            "buyer_action_info": "আপনার %{amount_due} পেমেন্ট বাকি আছে।",
+            "instruction_html": "নিচের বিবরণ ব্যবহার করে মাল্টিব্যাঙ্কো অথবা অনলাইনে আপনার পেমেন্ট করুন। প্রশ্নগুলির জন্য বা পেমেন্টের বিবরণ আপডেট করতে, %{contact_us}।",
+            "reference": "সূত্র",
+            "find_nearest_atm": "নিকটতম এটিএম খুঁজুন"
+          },
+          "due_notice": "আপনার %{amount_due} পেমেন্ট %{due_date} তারিখে দিতে হবে।"
         },
         "saved_credit_card_actions": {
           "delete": "মুছে ফেলুন",
@@ -806,7 +815,112 @@
         "wechat_app_label": "উইচ্যাট",
         "oxxo_label": "অক্সো",
         "satispay_label": "স্যাটিসপে",
-        "usdc_cashback_title": "%{incentive_percentage}% ক্যাশব্যাক"
+        "usdc_cashback_title": "%{incentive_percentage}% ক্যাশব্যাক",
+        "saved_by_payment_method": "%{payment_method} দ্বারা সংরক্ষিত",
+        "pay_with_payment_method": "%{payment_method} দিয়ে পেমেন্ট করুন",
+        "different_credit_card_label": "অন্য একটি ক্রেডিট কার্ড ব্যবহার করুন",
+        "same_billing_address_label": "শিপিং ঠিকানা হিসাবে একই",
+        "different_billing_address_label": "একটি ভিন্ন বিলিং ঠিকানা ব্যবহার করুন",
+        "billing_address_associated_with_mandate": "পেমেন্ট পদ্ধতির সাথে যুক্ত ঠিকানা ব্যবহার করুন",
+        "free_order_notice_html": "আপনার অর্ডারটি <strong>বিনামূল্যে</strong>। কোনো পেমেন্টের প্রয়োজন নেই।",
+        "express_checkout_free_order": "বিনামূল্যের অর্ডারের জন্য আপনাকে চার্জ করা হবে না",
+        "order_covered_by_gift_cards_notice": {
+          "one": "আপনার অর্ডারটি আপনার গিফট কার্ডের আওতাভুক্ত।",
+          "other": "আপনার অর্ডারটি আপনার গিফট কার্ড দিয়ে কভার করা হয়েছে।"
+        },
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} মোট %{total_shop_price}",
+        "receiver_payment_experience_hint": "আপনার অর্ডার দেওয়ার পরে, আপনি পেমেন্টের বিবরণ পাবেন। %{due_days} দিনের মধ্যে মাল্টিব্যাঙ্কো অথবা অনলাইনে পেমেন্ট করুন।",
+        "billing_address_title": "বিলিং ঠিকানা",
+        "billing_address_rollup_accessibility_label": "বিলিং ঠিকানা বিকল্পগুলি",
+        "billing_address_description": "আপনার কার্ড বা পেমেন্ট পদ্ধতির সাথে মেলে এমন ঠিকানাটি নির্বাচন করুন।",
+        "billing_address_description_no_shipping_address": "আপনার কার্ড বা পেমেন্ট পদ্ধতির সাথে মেলে এমন ঠিকানা দিন।",
+        "no_js_credit_card_fields_redirect_hint": "আপনাকে আপনার অর্থপ্রদানের তথ্য যোগ করার জন্য পুনঃনির্দেশিত করা হবে।",
+        "card_fields_container_prefix": "এর জন্য ফিল্ড কনটেইনার:",
+        "card_fields_unavailable_html": {
+          "one": "ক্রেডিট এবং ডেবিট কার্ডের মাধ্যমে পেমেন্ট এখন উপলব্ধ নেই।<br><a href=\"%{current_url}\">এই পৃষ্ঠাটি রিফ্রেশ করুন</a> অথবা পরে আবার চেষ্টা করুন।",
+          "other": "ক্রেডিট এবং ডেবিট কার্ডের মাধ্যমে পেমেন্ট এখন সম্ভব নয়।<br><a href=\"%{current_url}\">এই পৃষ্ঠাটি রিফ্রেশ করুন</a> অথবা অন্য কোনো পেমেন্ট পদ্ধতি ব্যবহার করে দেখুন।"
+        },
+        "card_fields_processing_error": "পেমেন্ট প্রক্রিয়া করতে সমস্যা হয়েছে। এই পেজটি রিফ্রেশ করার চেষ্টা করুন অথবা আপনার ইন্টারনেট সংযোগ পরীক্ষা করুন।",
+        "technical_error": "একটি প্রযুক্তিগত সমস্যার কারণে এই মুহূর্তে অর্থপ্রদান সম্পন্ন করা যাচ্ছে না। অনুগ্রহ করে কয়েক মিনিট পর আবার চেষ্টা করুন।",
+        "no_method_error": "এই দোকান এখন পেমেন্ট গ্রহণ করতে পারছে না।",
+        "not_configured_error": "এই দোকান এখন পেমেন্ট গ্রহণ করতে পারছে না।",
+        "missing_credit_card_error": "পেমেন্ট সম্পন্ন করতে আপনার কার্ডের বিবরণ লিখুন",
+        "payment_method_not_available_for_shipping_address_error": "পেমেন্ট পদ্ধতি নির্বাচিত শিপিং ঠিকানার জন্য উপলব্ধ নয়। অন্য পেমেন্ট পদ্ধতি বেছে নিন।",
+        "generic_incorrect_card_info": "আপনার পেমেন্টের বিবরণ যাচাই করা যায়নি। আপনার কার্ডের বিবরণ পরীক্ষা করে আবার চেষ্টা করুন।",
+        "sofort_label": "সফট ব্যাংক ট্রান্সফার",
+        "paypal_wallet_label": "পেপাল ওয়ালেট",
+        "shop_pay_installments_label": "শপ পে কিস্তি",
+        "default": "ডিফল্ট",
+        "paypal_modal": {
+          "order_contains_subscriptions": "সদস্যতা",
+          "order_contains_fixed_selling_plans": "মোট বিলের মধ্যে ট্যাক্স, শিপিং, স্থগিত চার্জ এবং কিছু ডিসকাউন্ট অন্তর্ভুক্ত নাও থাকতে পারে। আজকের বকেয়া টাকার পরিমাণ জানতে চেকআউট করুন।"
+        },
+        "klarna_pay_later_label": "ক্লার্নার মাধ্যমে পরে পেমেন্ট করুন",
+        "klarna_pay_now_label": "ক্লারনার মাধ্যমে এখনই পেমেন্ট করুন",
+        "bancontact_label": "ব্যানকন্টাক্ট",
+        "giropay_label": "জিরোপে",
+        "multibanco_label": "মাল্টিব্যাঙ্কো",
+        "mb_way_label": "এমবি ওয়ে",
+        "bizum_label": "বিজুম",
+        "eps_label": "ইপিএস-ট্রান্সফার",
+        "klarna_slice_it_label": "ক্লারনার সাথে অর্থায়ন করুন",
+        "afterpay_label": "আফটারপে",
+        "cashapppay_label": "ক্যাশ অ্যাপ পে",
+        "przelewy24_label": "প্রজেলেয়ি২৪",
+        "mobilepay_label": "মোবাইলপে",
+        "grabpay_label": "গ্র্যাবপে",
+        "kcp_creditcard_label": "কেসিপি ক্রেডিট কার্ড",
+        "purchase_options_card_update_agreement_label_html": "আপনার অর্থপ্রদানের পদ্ধতি আপডেট করার মাধ্যমে, আপনি এই স্টোরের <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">বাতিলকরণ নীতি</a> অনুযায়ী যেকোনো পুনরাবৃত্ত বা স্থগিত ক্রয়ের জন্য অর্থপ্রদানের অনুমোদন দিচ্ছেন।",
+        "subscription_card_update_agreement_label": "পেমেন্ট পদ্ধতি পরিবর্তন করলে আপনার সাবস্ক্রিপশন এবং ভবিষ্যতের পুনরাবৃত্ত পেমেন্ট আপডেট হবে।",
+        "subscription_agreement_label": "আপনার কার্টের এক বা একাধিক আইটেম একটি স্থগিত বা সাবস্ক্রিপশন কেনাকাটা। আপনার পেমেন্ট চালিয়ে যাওয়ার মাধ্যমে, আপনি সম্মত হচ্ছেন যে আপনার পেমেন্ট পদ্ধতি স্বয়ংক্রিয়ভাবে এই পৃষ্ঠায় তালিকাভুক্ত মূল্য এবং ফ্রিকোয়েন্সিতে চার্জ করা হবে যতক্ষণ না এটি শেষ হয় বা আপনি বাতিল করেন। সমস্ত বাতিলকরণ %{cancelled}-এর সাপেক্ষে।",
+        "subscription_agreement_cancelled": "বাতিলকরণ নীতি",
+        "subscription_heading": "সাবস্ক্রিপশন চুক্তি",
+        "subscription_agreement_label_html": "আমি বুঝতে পারছি যে আমি একটি সাবস্ক্রিপশনের জন্য সম্মত হচ্ছি। এটি তালিকাভুক্ত মূল্য এবং ফ্রিকোয়েন্সিতে নবায়ন হবে যতক্ষণ না এটি শেষ হয় বা <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">বাতিল</a> করা হয়।\n",
+        "purchase_options_agreement_label": "আপনার কার্টে থাকা এক বা একাধিক আইটেম একটি ডেফার্ড বা পুনরাবৃত্তিমূলক কেনাকাটা। আপনার পেমেন্টের সাথে এগিয়ে যাওয়ার মাধ্যমে, আপনি সম্মত হচ্ছেন যে আপনার পেমেন্ট পদ্ধতিটি স্বয়ংক্রিয়ভাবে এই পৃষ্ঠায় তালিকাভুক্ত মূল্য এবং ফ্রিকোয়েন্সিতে চার্জ করা হবে যতক্ষণ না এটি শেষ হয় বা আপনি বাতিল করেন। সমস্ত বাতিলকরণ %{cancellation_policy_label}-এর অধীন।",
+        "purchase_options_agreement_label_html": "আমি বুঝতে পারছি যে আমার কার্টের এক বা একাধিক আইটেম স্থগিত বা পুনরাবৃত্ত কেনাকাটা। চালিয়ে যাওয়ার মাধ্যমে, আমি <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">বাতিলকরণ নীতিতে</a> সম্মত হচ্ছি এবং আমার অর্ডার পূরণ না হওয়া পর্যন্ত বা আমি বাতিল না করা পর্যন্ত, যদি অনুমতি দেওয়া হয়, তাহলে এই পৃষ্ঠায় তালিকাভুক্ত মূল্য, ফ্রিকোয়েন্সি এবং তারিখে আমার পেমেন্ট পদ্ধতি চার্জ করার জন্য আপনাকে অনুমোদন দিচ্ছি।",
+        "purchase_options_agreement_label_wallets": "আপনার অর্থপ্রদান চালিয়ে যাওয়ার মাধ্যমে, আপনি এই পৃষ্ঠায় তালিকাভুক্ত ভবিষ্যতের চার্জ এবং বাতিলকরণ নীতিতে সম্মত হচ্ছেন।",
+        "change_currency_section_description": "একটি মুদ্রা বিকল্প নির্বাচন করুন",
+        "no_real_orders_dev_store": "এই দোকান আসল অর্ডার বা আসল পেমেন্ট গ্রহণ করতে পারে না।",
+        "waiting_on_payment_methods": "উপলভ্য অর্থপ্রদানের পদ্ধতিগুলি আনা হচ্ছে...",
+        "apple_pay_payment_error": "আপনার পেমেন্ট সম্পন্ন করা যায়নি। আবার চেষ্টা করুন অথবা অন্য একটি পেমেন্ট পদ্ধতি ব্যবহার করুন।",
+        "taxes_not_included": "ট্যাক্স অন্তর্ভুক্ত নয়",
+        "no_taxes_banner_content": "এই অর্ডারে কোনো কর ধার্য করা হবে না। একবার অর্থ সংগ্রহ করা হয়ে গেলে, আর কোনো কর যোগ করা যাবে না।",
+        "paypal": {
+          "connect": "আপনার পেপ্যাল অ্যাকাউন্ট কানেক্ট করতে ক্লিক করুন"
+        },
+        "apple": {
+          "connect": "আপনার Apple Pay অ্যাকাউন্ট সংযুক্ত করতে ক্লিক করুন",
+          "not_available": "এই ব্রাউজারে Apple Pay উপলব্ধ নয়। আপনার Apple Pay অ্যাকাউন্ট কানেক্ট করতে হলে আপনাকে Apple ডিভাইসে Safari ব্যবহার করতে হবে।"
+        },
+        "google": {
+          "connect": "আপনার Google Pay অ্যাকাউন্টের সাথে সংযোগ করতে ক্লিক করুন",
+          "error_authorizing": "পেমেন্ট অনুমোদনে ত্রুটি"
+        },
+        "account_connected": "অ্যাকাউন্ট সংযুক্ত হয়েছে।",
+        "mor_disclaimer_html": "<p>নীচে ক্লিক করে এবং আপনার অর্ডার সম্পূর্ণ করার মাধ্যমে, আপনি গ্লোবাল-ই-এর <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">শর্তাবলী</a>\nএবং <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">গোপনীয়তা নীতি</a> অনুসারে এই লেনদেনের জন্য মার্চেন্ট অফ রেকর্ড হিসাবে গ্লোবাল-ই থেকে আপনার আইটেমগুলি কিনতে সম্মত হচ্ছেন। গ্লোবাল-ই হল %{shop_name} এর জন্য একটি আন্তর্জাতিক পূর্ণতা পরিষেবা প্রদানকারী।</p>\n",
+        "update_payment_method": "পেমেন্টের পদ্ধতি হালনাগাদ করুন",
+        "order_covered_by_store_credit_notice": "আপনার অর্ডারটি আপনার স্টোর ক্রেডিটের আওতাভুক্ত।",
+        "order_covered_by_redeemables_notice": "আপনার অর্ডার কভার করা হয়েছে।",
+        "store_credit": {
+          "label": "স্টোর ক্রেডিট",
+          "apply_label": "স্টোর ক্রেডিট প্রয়োগ করুন",
+          "add_label": "স্টোর ক্রেডিট যোগ করুন",
+          "manage_label": "স্টোর ক্রেডিট পরিচালনা করুন",
+          "buying_gift_card": "আপনি গিফট কার্ড কিনতে স্টোর ক্রেডিট ব্যবহার করতে পারবেন না।",
+          "no_fixed_selling_plans": "বিলম্বিত ক্রয়ের বিকল্পগুলির সাথে আপনি স্টোর ক্রেডিট ব্যবহার করতে পারবেন না"
+        },
+        "billing_must_match_shipping_notice": "আপনার পেমেন্ট পদ্ধতির বিলিং ঠিকানা অবশ্যই শিপিং ঠিকানার সাথে মিলতে হবে।",
+        "same_billing_address_checkbox_label": "বিলিং ঠিকানা হিসেবে শিপিং ঠিকানা ব্যবহার করুন",
+        "location_billing_address_label": "অবস্থান বিলিং ঠিকানা",
+        "fact_billing_address_label": "বিলিং ঠিকানা",
+        "location_shipping_address_label": "ঠিকানা পাঠানোর ঠিকানা",
+        "use_order_billing_address_label": "অর্ডারের বিলিং ঠিকানা ব্যবহার করুন",
+        "use_location_billing_address_label": "অবস্থান বিলিং ঠিকানা ব্যবহার করুন",
+        "use_location_shipping_address_label": "অবস্থান শিপিং ঠিকানা ব্যবহার করুন",
+        "no_working_method_error": "এই দোকানে এখন পেমেন্ট নেওয়া যাচ্ছে না। অনুগ্রহ করে এই পৃষ্ঠাটি রিফ্রেশ করুন অথবা পরে আবার আসুন।",
+        "shipping_rate_updated": "উপলব্ধ শিপিং পদ্ধতি আপডেট করা হয়েছে। চেক আউট করার আগে আপনার পছন্দ নিশ্চিত করুন।",
+        "billing_address_invalid_phone": "{{label}} {{last_digits}}-এর জন্য আপনার বিলিং ঠিকানায় ফোন নম্বর আপডেট করুন, এরপর চালিয়ে যান।",
+        "billing_address_invalid_phone_no_card": "চালিয়ে যেতে আপনার বিলিং ঠিকানায় ফোন নম্বর আপডেট করুন।"
       },
       "post_purchase": {
         "components": {
