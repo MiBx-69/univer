@@ -1844,17 +1844,64 @@
     "notices": {
       "order": {
         "financial_status": {
-          "paid": "পরিশোধিত"
+          "paid": "পরিশোধিত",
+          "authorized": "অনুমোদিত",
+          "pending": "মুলতবি",
+          "unpaid": "অপরিশোধিত",
+          "voided": "বাতিল করা হয়েছে",
+          "partially_paid": "আংশিকভাবে পরিশোধিত",
+          "partially_refunded": "আংশিকভাবে ফেরত দেওয়া হয়েছে",
+          "refunded": "ফেরত দেওয়া হয়েছে",
+          "expired": "মেয়াদ উত্তীর্ণ"
         },
         "transaction_status": {
-          "error": "ত্রুটি"
+          "error": "ত্রুটি",
+          "success": "সাফল্য",
+          "pending": "মুলতবি",
+          "failure": "ব্যর্থতা"
         },
         "cancel_reason": {
-          "other": "অন্যান্য"
+          "other": "অন্যান্য",
+          "declined": "পেমেন্ট প্রত্যাখ্যান করা হয়েছে",
+          "inventory": "পণ্যগুলি অনুপলব্ধ"
+        },
+        "not_available": "এই অর্ডারটি পাওয়া যাচ্ছে না",
+        "fulfillment_status": {
+          "fulfilled": "পূর্ণ হয়েছে",
+          "complete": "সম্পূর্ণ",
+          "partial": "আংশিক",
+          "unfulfilled": "অপূর্ণ",
+          "restocked": "পুনরায় মজুদ করা হয়েছে"
         }
       },
       "cart": {
         "not_found": "কার্ট খুঁজে পাওয়া যায়নি"
+      },
+      "customer": {
+        "password_reset_error": "পাসওয়ার্ড রিসেট সংক্রান্ত ত্রুটি",
+        "subscribe_error": "সাবস্ক্রাইব করতে সমস্যা",
+        "unsubscribe_error": "সদস্যতা বাতিলের ত্রুটি",
+        "no_account_found": "এই ইমেইল দিয়ে কোনো অ্যাকাউন্ট পাওয়া যায়নি।",
+        "invalid_credentials": "ভুল ইমেল বা পাসওয়ার্ড।",
+        "denylisted_reset_password": "আপনার অ্যাকাউন্ট অ্যাক্সেস করা যায়নি কারণ বর্তমান পাসওয়ার্ডটি সুরক্ষিত নয়। আপনার পাসওয়ার্ড আপডেট করার জন্য আপনি একটি ইমেল পাবেন।",
+        "signup_disabled": "গ্রাহক অ্যাকাউন্ট তৈরি নিষ্ক্রিয় করা হয়েছে।"
+      },
+      "address": {
+        "updated": "ঠিকানা সফলভাবে আপডেট করা হয়েছে।",
+        "error_updating": "ঠিকানা আপডেটে সমস্যা",
+        "created": "ঠিকানা সফলভাবে তৈরি করা হয়েছে",
+        "error_creating": "ঠিকানা তৈরিতে সমস্যা হয়েছে।",
+        "deleted": "ঠিকানা সফলভাবে মুছে ফেলা হয়েছে",
+        "error_deleting": "ঠিকানা মোছা যায়নি।"
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "যোগ করা হয়েছে %{delta}",
+          "increment_item": "যোগ করা হয়েছে %{delta}",
+          "decrement_item": "%{total}টির মধ্যে %{delta}টি সরানো হয়েছে",
+          "decrement_fulfilled_line_item": "%{total} এর মধ্যে %{delta} ফেরত দেওয়া হয়েছে",
+          "decrement_return_line_item": "ফেরত থেকে %{delta} সরানো হয়েছে"
+        }
       }
     },
     "addresses": {
@@ -1863,27 +1910,99 @@
     "errors": {
       "shop_404": {
         "owner_ctas": {
-          "admin_link_text": "অ্যাডমিন"
+          "admin_link_text": "অ্যাডমিন",
+          "header": "আপনি কি দোকানের মালিক?",
+          "fix_domain": "আপনার নতুন ওয়েব ঠিকানা সেট আপ করা শেষ করুন, %{domain_settings_link} -এ যান। \"ডোমেন কানেক্ট করুন\" এ ক্লিক করুন এবং লিখুন: %{domain}।<br>আপনার স্টোরে প্রবেশ করতে সমস্যা হলে, %{forgot_your_store_link} পেজটি চেষ্টা করুন।",
+          "fix_domain_link_text": "আপনার ডোমেইন সেটিংস",
+          "forgot_your_store_link_text": "আপনার স্টোর ভুলে গেছেন",
+          "add_storefront": "আপনি আপনার %{admin_link}-এ অনলাইন স্টোর চ্যানেল যোগ করে আপনার ওয়েবসাইট সেট আপ করতে পারেন। আপনার স্টোরে প্রবেশ করতে সমস্যা হলে, %{forgot_your_store_link} পেজটি ব্যবহার করে দেখতে পারেন।"
         },
         "title_unavailable": "স্টোর অনুপলব্ধ",
         "heros": {
           "store_will_be_right_back": "এই স্টোরটি শীঘ্রই আবার চালু হবে",
-          "store_unavailable": "এই দোকানটি বর্তমানে উপলব্ধ নয়।"
+          "store_unavailable": "এই দোকানটি বর্তমানে উপলব্ধ নয়।",
+          "store_not_exist": "এই দোকানটির অস্তিত্ব নেই।",
+          "no_storefront": "এই দোকানে এখনো কোনো ওয়েবসাইট নেই।"
         },
         "subtitles": {
           "store_will_be_right_back": "যত দ্রুত সম্ভব এটিকে অনলাইনে ফিরিয়ে আনতে কাজ করছে Shopify।"
         },
         "links": {
-          "refresh_page": "পৃষ্ঠাটি রিফ্রেশ করুন"
+          "refresh_page": "পৃষ্ঠাটি রিফ্রেশ করুন",
+          "explore_other_stores": "অন্যান্য দোকানে যান",
+          "start_free_trial": "বিনামূল্যে ব্যবহার শুরু করুন"
         },
         "status_card": {
           "eyebrow": "দোকান মালিকদের জন্য সাহায্য",
           "header": "শপফাইয়ের অবস্থা পরীক্ষা করুন",
           "caption": "Shopify-এ এই দোকানটি ছাড়া আরও কোথাও বিভ্রাট হচ্ছে কিনা তা খুঁজে দেখুন।",
           "link_text": "Shopify সিস্টেমের বর্তমান অবস্থা দেখুন"
+        },
+        "title": "একটি ই-কমার্স ওয়েবসাইট তৈরি করুন এবং অনলাইনে বিক্রি করুন! শপিফাই দ্বারা ই-কমার্স সফটওয়্যার",
+        "ctas": {
+          "sell_in_person": {
+            "header": "সরাসরি বিক্রি করুন",
+            "caption": "আপনার খুচরা ব্যবসার জন্য প্রয়োজনীয় ফিচারগুলি পান, তা আপনি নতুন শুরু করুন বা ব্যবসা বাড়াতে চান।",
+            "link_text": "বিনামূল্যে ট্রায়াল শুরু করুন"
+          },
+          "open_a_store": {
+            "header": "একটি নতুন Shopify স্টোর খুলুন",
+            "caption": "৩ দিনের বিনামূল্যে ট্রায়াল শুরু করুন, তারপর পরবর্তী ৩ মাসের জন্য প্রতি মাসে $১ করে উপভোগ করুন।",
+            "link_text": "এখনই সাইন আপ করুন"
+          },
+          "editions": {
+            "header": "শপিফাই এডিশনস দেখুন",
+            "caption": "১০০টির বেশি প্রোডাক্ট আপডেটের সাথে আপনি আরও বেশি প্রোডাক্টিভ, ক্রিয়েটিভ এবং বাণিজ্যে আরও শক্তিশালী হতে পারবেন, যা আপনি আগে কখনো কল্পনাও করেননি।",
+            "link_text": "সাম্প্রতিক সংস্করণগুলি দেখুন"
+          },
+          "store_owner": {
+            "header": "আপনি কি দোকানের মালিক?",
+            "caption": "আপনার দোকানে ঢুকতে কি সমস্যা হচ্ছে? %{forgot_your_store_link} ফিচারটি ব্যবহার করে দেখুন। আপনি যদি আপনার দোকানটি পুনরায় চালু করতে চান তাহলে %{shopify_support_link} -এ যোগাযোগ করুন।",
+            "shopify_support_link_text": "Shopify সহায়তা"
+          }
         }
       },
-      "gift_card_currency_mismatch": "এই কেনাকাটার জন্য এই উপহার কার্ড ব্যবহার করা যাবে না। এটি পুনরায় ইস্যু করার জন্য %{shop_name}-এর সাথে যোগাযোগ করুন।"
+      "gift_card_currency_mismatch": "এই কেনাকাটার জন্য এই উপহার কার্ড ব্যবহার করা যাবে না। এটি পুনরায় ইস্যু করার জন্য %{shop_name}-এর সাথে যোগাযোগ করুন।",
+      "blank": "খালি হতে পারে না",
+      "blocked_address": "এই লোকেশনটি সমর্থিত নয়",
+      "credit_card_session_expired": "ক্রেডিট কার্ড অনুমোদনের মেয়াদ শেষ হয়ে গেছে, অনুগ্রহ করে আপনার পেমেন্টের তথ্য আবার দিন। আপনার কার্ড থেকে কোনো টাকা কাটা হয়নি।",
+      "empty": "খালি হতে পারে না",
+      "invalid_email": "অবশ্যই একটি বৈধ ইমেল ঠিকানা হতে হবে",
+      "discount_disabled": "এই ডিসকাউন্টটি নিষ্ক্রিয় করা হয়েছে",
+      "discount_expired": "এই ছাড়টি আর বৈধ নয়",
+      "discount_limit_reached": "এই ছাড়ের ব্যবহার সীমা অতিক্রম করেছে",
+      "discount_not_found": "প্রদত্ত কোডের সাথে মানানসই কোনো বৈধ ছাড় খুঁজে পাওয়া যায়নি",
+      "customer_already_used_once_per_customer_discount_notice": "এই ছাড়ের ব্যবহার সীমা অতিক্রম করেছে",
+      "gift_card_already_applied": "আপনার চেকআউটে ইতিমধ্যেই কোড প্রয়োগ করা হয়েছে",
+      "gift_card_code_invalid": "কোডটি অবৈধ",
+      "gift_card_depleted": "এই উপহার কার্ডে আর কোনো তহবিল অবশিষ্ট নেই",
+      "gift_card_disabled": "গিফট কার্ড নিষ্ক্রিয় আছে",
+      "gift_card_expired": "উপহার কার্ডের মেয়াদ শেষ হয়ে গেছে",
+      "invalid": "অবৈধ",
+      "bad_domain": "একটি অবৈধ ডোমেন নাম রয়েছে",
+      "taken": "ইতিমধ্যেই নেওয়া হয়ে গেছে",
+      "contains_html_tags": "এইচটিএমএল ট্যাগ থাকতে পারবে না",
+      "too_short": "খুব ছোট (সর্বনিম্ন %{count} অক্ষর)",
+      "too_long": "অনেক লম্বা (সর্বোচ্চ %{count}টি অক্ষর হতে পারে)",
+      "password_mismatch": "প্রদত্ত পাসওয়ার্ডের সাথে মিলতে হবে",
+      "contains_spaces": "স্পেস দিয়ে শুরু বা শেষ হয়।",
+      "invalid_for_country": "%{country} এর জন্য বৈধ নয়",
+      "invalid_for_country_and_province": "%{province} এবং %{country} এর জন্য বৈধ নয়",
+      "invalid_province_in_country": "%{country}-এ একটি বৈধ প্রদেশ নয়",
+      "invalid_state_in_country": "%{country}-এর একটি বৈধ রাজ্য নয়",
+      "invalid_region_in_country": "%{country}-এ একটি বৈধ অঞ্চল নয়",
+      "less_than_or_equal_to": "অবশ্যই %{count} এর কম বা সমান হতে হবে",
+      "not_supported": "সমর্থিত নয়",
+      "full_name_required": "নামের প্রথম অংশ এবং নামের শেষ অংশ লিখুন",
+      "invalid_for_card_type": "বৈধ নয়",
+      "invalid_type": "দুঃখিত, আমরা এই ধরনের কার্ড গ্রহণ করি না।",
+      "invalid_format": "বিন্যাসটি বৈধ নয়",
+      "expired": "মেয়াদ উত্তীর্ণ হয়েছে",
+      "invalid_start_date_or_issue_number_for_debit": "একটি বৈধ শুরুর তারিখ বা ইস্যু নম্বর প্রয়োজন",
+      "invalid_expiry_year": "বৈধ মেয়াদের বছর নয়",
+      "reset_password_html": "এই ইমেল ঠিকানাটি ইতিমধ্যেই একটি অ্যাকাউন্টের সাথে যুক্ত। যদি এই অ্যাকাউন্টটি আপনার হয়, তাহলে আপনি <a href=\"/account/login#recover\">আপনার পাসওয়ার্ড রিসেট করতে পারবেন</a>",
+      "verify_email": "আমরা %{customer_email} -এ একটি ইমেল পাঠিয়েছি, আপনার ইমেল ঠিকানা যাচাই করতে অনুগ্রহ করে ইমেলের লিঙ্কে ক্লিক করুন।",
+      "product_not_available": "এই গ্রাহকের জন্য পণ্যটি প্রকাশিত নয়।"
     },
     "filters": {
       "boolean": {
@@ -1893,7 +2012,8 @@
     },
     "collections": {
       "sorting": {
-        "most_relevant": "সবচেয়ে প্রাসঙ্গিক"
+        "most_relevant": "সবচেয়ে প্রাসঙ্গিক",
+        "date_descending": "তারিখ, নতুন থেকে পুরানো"
       }
     },
     "email_marketing": {
