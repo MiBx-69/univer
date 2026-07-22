@@ -1,0 +1,351 @@
+{% comment %}
+  Newsletter Signup Popup
+  ------------------------
+  - Mobile-first, modern design
+  - Triggers after 5 seconds + a bit of scroll
+  - If subscribed: never shows again (permanent cookie)
+  - If closed without subscribing: hidden for 1 day, then shows again
+  - Save this file as: sections/newsletter-popup.liquid
+  - Add {% section 'newsletter-popup' %} to your theme.liquid, just before </body>
+{% endcomment %}
+
+<div id="newsletter-popup" class="nl-popup" aria-hidden="true">
+  <div class="nl-popup__overlay" data-nl-close></div>
+
+  <div class="nl-popup__card" role="dialog" aria-modal="true" aria-labelledby="nl-popup-heading">
+    <button type="button" class="nl-popup__close" data-nl-close aria-label="Close">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="4" x2="20" y2="20"></line>
+        <line x1="20" y1="4" x2="4" y2="20"></line>
+      </svg>
+    </button>
+
+    <div class="nl-popup__content">
+      <h2 id="nl-popup-heading" class="nl-popup__heading">Don't miss out</h2>
+      <p class="nl-popup__subheading">Join our community and never miss a deal.</p>
+
+      {% form 'customer', id: 'nl-popup-form', class: 'nl-popup__form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+
+        <div class="nl-popup__field">
+          <input
+            type="email"
+            name="contact[email]"
+            id="nl-popup-email"
+            class="nl-popup__input"
+            placeholder="Your email address"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="nl-popup__submit">Subscribe</button>
+        </div>
+
+        {% if form.posted_successfully? %}
+          <p class="nl-popup__success" data-nl-success>You're subscribed. Thank you!</p>
+          <script>window.nlFormPostedSuccessfully = true;</script>
+        {% endif %}
+        {% if form.errors %}
+          <p class="nl-popup__error">Please enter a valid email address.</p>
+        {% endif %}
+      {% endform %}
+
+      <p class="nl-popup__disclaimer">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .nl-popup {
+    --nl-bg: #ffffff;
+    --nl-text: #17181a;
+    --nl-muted: #6b6f76;
+    --nl-accent: #17181a;
+    --nl-accent-text: #ffffff;
+    --nl-border: #e7e5e1;
+    --nl-radius: 18px;
+
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+  }
+
+  .nl-popup.is-visible {
+    display: block;
+  }
+
+  .nl-popup__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 18, 20, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+
+  .nl-popup.is-visible .nl-popup__overlay {
+    opacity: 1;
+  }
+
+  .nl-popup__card {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;
+    background: var(--nl-bg);
+    border-radius: var(--nl-radius) var(--nl-radius) 0 0;
+    box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.18);
+    transform: translateY(100%);
+    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+    padding: 28px 24px calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .nl-popup.is-visible .nl-popup__card {
+    transform: translateY(0);
+  }
+
+  .nl-popup__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f2ef;
+    border: none;
+    border-radius: 50%;
+    color: var(--nl-text);
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .nl-popup__close:hover {
+    background: #e7e5e1;
+  }
+
+  .nl-popup__content {
+    text-align: left;
+  }
+
+  .nl-popup__heading {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+    color: var(--nl-text);
+  }
+
+  .nl-popup__subheading {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--nl-muted);
+    margin: 0 0 20px;
+  }
+
+  .nl-popup__field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nl-popup__input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px; /* prevents iOS auto-zoom */
+    padding: 14px 16px;
+    border: 1px solid var(--nl-border);
+    border-radius: 12px;
+    background: #fafaf9;
+    color: var(--nl-text);
+    outline: none;
+    transition: border-color 0.15s ease;
+  }
+
+  .nl-popup__input:focus {
+    border-color: var(--nl-accent);
+  }
+
+  .nl-popup__submit {
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 12px;
+    background: var(--nl-accent);
+    color: var(--nl-accent-text);
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+  }
+
+  .nl-popup__submit:hover {
+    opacity: 0.88;
+  }
+
+  .nl-popup__success {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: #1a7f4b;
+    font-weight: 600;
+  }
+
+  .nl-popup__error {
+    margin: 12px 0 0;
+    font-size: 14px;
+    color: #c0392b;
+  }
+
+  .nl-popup__disclaimer {
+    margin: 14px 0 0;
+    font-size: 12px;
+    color: var(--nl-muted);
+    text-align: center;
+  }
+
+  /* Desktop: centered modal instead of bottom sheet */
+  @media (min-width: 640px) {
+    .nl-popup__card {
+      top: 50%;
+      bottom: auto;
+      transform: translate(0, -45%);
+      border-radius: var(--nl-radius);
+      padding: 36px 32px;
+    }
+
+    .nl-popup.is-visible .nl-popup__card {
+      transform: translate(0, -50%);
+    }
+
+    .nl-popup__field {
+      flex-direction: row;
+    }
+
+    .nl-popup__submit {
+      width: auto;
+      white-space: nowrap;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nl-popup__card,
+    .nl-popup__overlay {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    var COOKIE_SUBSCRIBED = 'nl_subscribed';
+    var COOKIE_DISMISSED = 'nl_dismissed';
+    var TRIGGER_DELAY_MS = 5000;
+    var TRIGGER_SCROLL_PX = 50;
+    var DISMISS_DAYS = 1;
+
+    function getCookie(name) {
+      var match = document.cookie.match('(?:^|; )' + name + '=([^;]*)');
+      return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    function setCookie(name, value, days) {
+      var expires = '';
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = '; expires=' + date.toUTCString();
+      }
+      document.cookie = name + '=' + encodeURIComponent(value) + expires + '; path=/; SameSite=Lax';
+    }
+
+    // If this page load is the result of a successful signup, remember it
+    // immediately so the popup doesn't reopen after the reload.
+    if (window.nlFormPostedSuccessfully) {
+      setCookie(COOKIE_SUBSCRIBED, '1', 365);
+    }
+
+    // Never show again if already subscribed
+    if (getCookie(COOKIE_SUBSCRIBED) === '1') return;
+
+    // Respect the 1-day snooze after a manual close
+    if (getCookie(COOKIE_DISMISSED) === '1') return;
+
+    var popup = document.getElementById('newsletter-popup');
+    if (!popup) return;
+
+    var form = popup.querySelector('#nl-popup-form');
+    var hasScrolled = false;
+    var timeElapsed = false;
+    var shown = false;
+
+    function maybeShow() {
+      if (shown || !hasScrolled || !timeElapsed) return;
+      shown = true;
+      popup.classList.add('is-visible');
+      popup.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      window.removeEventListener('scroll', onScroll);
+      var firstInput = popup.querySelector('#nl-popup-email');
+      if (firstInput) firstInput.focus({ preventScroll: true });
+    }
+
+    function onScroll() {
+      if (window.scrollY > TRIGGER_SCROLL_PX) {
+        hasScrolled = true;
+        maybeShow();
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    setTimeout(function () {
+      timeElapsed = true;
+      maybeShow();
+    }, TRIGGER_DELAY_MS);
+
+    function closePopup(remember) {
+      popup.classList.remove('is-visible');
+      popup.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      if (remember) {
+        setCookie(COOKIE_DISMISSED, '1', DISMISS_DAYS);
+      }
+    }
+
+    popup.querySelectorAll('[data-nl-close]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        closePopup(true);
+      });
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && popup.classList.contains('is-visible')) {
+        closePopup(true);
+      }
+    });
+
+    if (form) {
+      form.addEventListener('submit', function () {
+        // Shopify reloads the page on submit; this covers the case where
+        // the reload happens before nlFormPostedSuccessfully can be read.
+        setCookie(COOKIE_SUBSCRIBED, '1', 365);
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Newsletter Popup",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Newsletter Popup"
+    }
+  ]
+}
+{% endschema %}
