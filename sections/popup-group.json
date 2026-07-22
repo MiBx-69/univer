@@ -950,6 +950,7 @@
       "block_order": [
         "group_bK8anF"
       ],
+      "disabled": true,
       "settings": {
         "popup_expire": 1,
         "popup_delay": 7,
